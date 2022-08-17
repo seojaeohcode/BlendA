@@ -1992,13 +1992,13 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
 		{
 			try
 			{
-				Debug.Log("[OVRManager] VrFocusLost event");
+				//Debug.Log("[OVRManager] VrFocusLost event");
 				if (VrFocusLost != null)
 					VrFocusLost();
 			}
 			catch (Exception e)
 			{
-				Debug.LogError("Caught Exception: " + e);
+				//Debug.LogError("Caught Exception: " + e);
 			}
 		}
 
@@ -2006,13 +2006,13 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
 		{
 			try
 			{
-				Debug.Log("[OVRManager] VrFocusAcquired event");
+				//Debug.Log("[OVRManager] VrFocusAcquired event");
 				if (VrFocusAcquired != null)
 					VrFocusAcquired();
 			}
 			catch (Exception e)
 			{
-				Debug.LogError("Caught Exception: " + e);
+				//Debug.LogError("Caught Exception: " + e);
 			}
 		}
 
@@ -2026,13 +2026,13 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
 		{
 			try
 			{
-				Debug.Log("[OVRManager] InputFocusLost event");
+				//Debug.Log("[OVRManager] InputFocusLost event");
 				if (InputFocusLost != null)
 					InputFocusLost();
 			}
 			catch (Exception e)
 			{
-				Debug.LogError("Caught Exception: " + e);
+				//Debug.LogError("Caught Exception: " + e);
 			}
 		}
 
@@ -2040,13 +2040,13 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
 		{
 			try
 			{
-				Debug.Log("[OVRManager] InputFocusAcquired event");
+				//Debug.Log("[OVRManager] InputFocusAcquired event");
 				if (InputFocusAcquired != null)
 					InputFocusAcquired();
 			}
 			catch (Exception e)
 			{
-				Debug.LogError("Caught Exception: " + e);
+				//Debug.LogError("Caught Exception: " + e);
 			}
 		}
 
@@ -2064,13 +2064,13 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
 		{
 			try
 			{
-				Debug.Log("[OVRManager] AudioOutChanged event");
+				//Debug.Log("[OVRManager] AudioOutChanged event");
 				if (AudioOutChanged != null)
 					AudioOutChanged();
 			}
 			catch (Exception e)
 			{
-				Debug.LogError("Caught Exception: " + e);
+				//Debug.LogError("Caught Exception: " + e);
 			}
 
 			prevAudioOutId = audioOutId;
@@ -2086,13 +2086,13 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
 		{
 			try
 			{
-				Debug.Log("[OVRManager] AudioInChanged event");
+				//Debug.Log("[OVRManager] AudioInChanged event");
 				if (AudioInChanged != null)
 					AudioInChanged();
 			}
 			catch (Exception e)
 			{
-				Debug.LogError("Caught Exception: " + e);
+				//Debug.LogError("Caught Exception: " + e);
 			}
 
 			prevAudioInId = audioInId;
@@ -2104,13 +2104,13 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
 		{
 			try
 			{
-				Debug.Log("[OVRManager] TrackingLost event");
+				//Debug.Log("[OVRManager] TrackingLost event");
 				if (TrackingLost != null)
 					TrackingLost();
 			}
 			catch (Exception e)
 			{
-				Debug.LogError("Caught Exception: " + e);
+				//Debug.LogError("Caught Exception: " + e);
 			}
 		}
 
@@ -2118,13 +2118,13 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
 		{
 			try
 			{
-				Debug.Log("[OVRManager] TrackingAcquired event");
+				//Debug.Log("[OVRManager] TrackingAcquired event");
 				if (TrackingAcquired != null)
 					TrackingAcquired();
 			}
 			catch (Exception e)
 			{
-				Debug.LogError("Caught Exception: " + e);
+				//Debug.LogError("Caught Exception: " + e);
 			}
 		}
 
