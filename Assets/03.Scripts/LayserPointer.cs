@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LayserPointer : MonoBehaviour
 {
@@ -31,8 +32,27 @@ public class LayserPointer : MonoBehaviour
     {
         layser.SetPosition(0, transform.position); // 첫번째 시작점 위치
                                                    // 업데이트에 넣어 줌으로써, 플레이어가 이동하면 이동을 따라가게 된다.
-                                                   //  선 만들기(충돌 감지를 위한)
+                                                   // 선 만들기(충돌 감지를 위한)
         //Debug.DrawRay(transform.position, transform.forward * raycastDistance, Color.green, 0.5f);
+
+        //레이캐스트 충돌
+        if (Physics.Raycast(transform.position, transform.forward, out Collided_object, raycastDistance))
+        {
+            //레이저의 1번 인덱스에 히트된 오브젝트를 넣겠다는 뜻.
+            layser.SetPosition(1, Collided_object.point);
+
+            //왼손, 오른손 컴바인형식 입력
+            if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) || OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
+            {
+                //만약 스타트 버튼이면
+                if (Collided_object.collider.gameObject.CompareTag("Start"))
+                {
+                    //로드 씬
+                    SceneManager.LoadScene("Main");
+                }
+            }
+        }
+
 
         // 충돌 감지 시
         if (Physics.Raycast(transform.position, transform.forward, out Collided_object, raycastDistance))
@@ -56,7 +76,6 @@ public class LayserPointer : MonoBehaviour
                 }
             }
         }
-
         else
         {
             // 레이저에 감지된 것이 없기 때문에 레이저 초기 설정 길이만큼 길게 만든다.
