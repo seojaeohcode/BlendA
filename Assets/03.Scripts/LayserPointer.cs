@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class LayserPointer : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class LayserPointer : MonoBehaviour
     private RaycastHit Collided_object; // 충돌된 객체
     private GameObject currentObject;   // 가장 최근에 충돌한 객체를 저장하기 위한 객체
 
-    public float raycastDistance = 100f; // 레이저 포인터 감지 거리
+    public float raycastDistance = 300f; // 레이저 포인터 감지 거리
 
     void Start()
     {
@@ -21,39 +22,109 @@ public class LayserPointer : MonoBehaviour
         Material material = new Material(Shader.Find("Standard"));
         material.color = new Color(0, 195, 255, 0.5f);
         layser.material = material;
-        // 레이저의 꼭지점은 2개가 필요 더 많이 넣으면 곡선도 표현 할 수 있다.
+        // 레이저의 꼭지Q점은 2개가 필요 더 많이 넣으면 곡선도 표현 할 수 있다.
         layser.positionCount = 2;
         // 레이저 굵기 표현
         layser.startWidth = 0.01f;
         layser.endWidth = 0.01f;
     }
-
+    
     void Update()
     {
         layser.SetPosition(0, transform.position); // 첫번째 시작점 위치
                                                    // 업데이트에 넣어 줌으로써, 플레이어가 이동하면 이동을 따라가게 된다.
                                                    // 선 만들기(충돌 감지를 위한)
-        //Debug.DrawRay(transform.position, transform.forward * raycastDistance, Color.green, 0.5f);
+        
+        Debug.DrawRay(transform.position, transform.forward * raycastDistance, Color.green, 0.5f);
 
         //레이캐스트 충돌
         if (Physics.Raycast(transform.position, transform.forward, out Collided_object, raycastDistance))
         {
-            //레이저의 1번 인덱스에 히트된 오브젝트를 넣겠다는 뜻.
             layser.SetPosition(1, Collided_object.point);
-
-            //왼손, 오른손 컴바인형식 입력
-            if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) || OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
+            if (Collided_object.collider.gameObject.CompareTag("MainMenu"))
             {
-                //만약 스타트 버튼이면
-                if (Collided_object.collider.gameObject.CompareTag("Start"))
+                //layser.SetPosition(1, Collided_object.point);
+            }
+            //만약 스타트 버튼이면
+            if (Collided_object.collider.gameObject.CompareTag("Start"))
+            {
+                //layser.SetPosition(0, Collided_object.point);
+                Debug.Log("스타트 버튼에 레이 충돌!");
+                //레이저의 1번 인덱스에 히트된 오브젝트를 넣겠다는 뜻.
+
+                //왼손
+                if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
                 {
+                    Debug.Log("스타트 왼손 트리거 선택");
                     //로드 씬
                     SceneManager.LoadScene("Main");
                 }
+
+                //오른손
+                if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
+                {
+                    Debug.Log("스타트 오른손 트리거 선택");
+                    //로드 씬
+                    SceneManager.LoadScene("Main");
+                }
+            } 
+            else if (Collided_object.collider.gameObject.CompareTag("Quit"))
+            {
+                //layser.SetPosition(1, Collided_object.point);
+                Debug.Log("나가기 버튼에 레이 충돌!");
+                //레이저의 1번 인덱스에 히트된 오브젝트를 넣겠다는 뜻.
+
+                //왼손
+                if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
+                {
+                    Debug.Log("나가기 왼손 트리거 선택");
+                    //Application.Quit();
+                    EditorApplication.Exit(0);
+                }
+
+                //오른손
+                if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
+                {
+                    Debug.Log("나가기 오른손 트리거 선택");
+                    //Application.Quit();
+                    EditorApplication.Exit(0);
+                }
+            }
+        }
+        else
+        {
+            // 레이저에 감지된 것이 없기 때문에 레이저 초기 설정 길이만큼 길게 만든다.
+            layser.SetPosition(1, transform.position + (transform.forward * raycastDistance));
+
+            // 최근 감지된 오브젝트가 Button인 경우
+            // 버튼은 현재 눌려있는 상태이므로 이것을 풀어준다.
+
+            if (currentObject != null)
+            {
+                currentObject.GetComponent<Button>().OnPointerExit(null);
+                currentObject = null;
             }
         }
 
+        /*void OnDrawGizmos()
+        {
+            float maxDistance = 300;
+            RaycastHit hit;
+            
+            // Physics.Raycast (레이저를 발사할 위치, 발사 방향, 충돌 결과, 최대 거리)
+            
+            Gizmos.color = Color.red;
+            if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistance))
+            {
+                if(hit.collider.gameObject.CompareTag("Start"))
+                {
+                    Gizmos.DrawRay(transform.position, transform.forward * hit.distance);
+                }
+            }
+                
+        }*/
 
+        /*
         // 충돌 감지 시
         if (Physics.Raycast(transform.position, transform.forward, out Collided_object, raycastDistance))
         {
@@ -90,7 +161,7 @@ public class LayserPointer : MonoBehaviour
             }
 
         }
-
+        */
     }
 
     private void LateUpdate()

@@ -29,7 +29,7 @@ public class OVRLocomotion : MonoBehaviour
         }
         else
         {
-            PlayerTurn();
+            //PlayerTurn();
         }
     }
 
@@ -51,7 +51,7 @@ public class OVRLocomotion : MonoBehaviour
         player.Rotate(Vector3.up * rotateValue.x * rotateSpeed * Time.deltaTime);
     }
 
-    private void PlayerTurn()
+    /*private void PlayerTurn()
     {
         if (OVRInput.GetDown(OVRInput.RawButton.RThumbstickRight))
         {
@@ -63,5 +63,5 @@ public class OVRLocomotion : MonoBehaviour
             OVRFade.Instance.AutoFade();
             player.rotation = Quaternion.Euler(0, player.rotation.eulerAngles.y - rotateAngle, 0);
         }
-    }
+    }*/
 }
