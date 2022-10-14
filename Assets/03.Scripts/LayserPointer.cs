@@ -12,7 +12,6 @@ public class LayserPointer : MonoBehaviour
     private GameObject currentObject;   // 가장 최근에 충돌한 객체를 저장하기 위한 객체
 
     public float raycastDistance = 300f; // 레이저 포인터 감지 거리
-
     void Start()
     {
         // 스크립트가 포함된 객체에 라인 렌더러라는 컴포넌트를 넣고있다.
@@ -94,7 +93,7 @@ public class LayserPointer : MonoBehaviour
         else
         {
             // 레이저에 감지된 것이 없기 때문에 레이저 초기 설정 길이만큼 길게 만든다.
-            layser.SetPosition(1, transform.position + (transform.forward * raycastDistance));
+            layser.SetPosition(1, transform.position + (transform.forward * raycastDistance * 100));
 
             // 최근 감지된 오브젝트가 Button인 경우
             // 버튼은 현재 눌려있는 상태이므로 이것을 풀어준다.
