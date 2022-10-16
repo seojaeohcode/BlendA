@@ -9,6 +9,8 @@ TagManager:
   - Start
   - Quit
   - MainMenu
+  - Drink
+  - FluidPoint
   layers:
   - Default
   - TransparentFX

@@ -10,7 +10,7 @@ public class DrinkManager : MonoBehaviour
     public GameObject[] AlcoholList = new GameObject[2];
     public GameObject[] SyrupList = new GameObject[2];
 
-    //GameObject[] Ingrediant = new GameObject[3];
+    GameObject[] Ingrediant = new GameObject[3];
     
 
     //public List<GameObject> FruitList = new List<GameObject>();
@@ -40,14 +40,14 @@ public class DrinkManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*
-        ingrediant.FruitList.Add("FruitA");
-        ingrediant.FruitList.Add("FruitB");
-        ingrediant.AlcoholList.Add("AlcoholA");
-        ingrediant.AlcoholList.Add("AlcoholB");
-        ingrediant.SyrupList.Add("SyrupA");
-        ingrediant.SyrupList.Add("SyrupB");
-        */
+        
+        //ingrediant.FruitList.Add("FruitA");
+        //ingrediant.FruitList.Add("FruitB");
+        //ingrediant.AlcoholList.Add("AlcoholA");
+        //ingrediant.AlcoholList.Add("AlcoholB");
+        //ingrediant.SyrupList.Add("SyrupA");
+        //ingrediant.SyrupList.Add("SyrupB");
+        
     }
 
     // Update is called once per frame
