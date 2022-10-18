@@ -12,6 +12,7 @@ TagManager:
   - Drink
   - FluidPoint
   - MergeTest
+  - Fruit
   layers:
   - Default
   - TransparentFX
