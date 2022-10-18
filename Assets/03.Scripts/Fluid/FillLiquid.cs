@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class FillLiquid : MonoBehaviour
 {
-    public float a;
+
+    float a;
+    float b;
     void Start()
     {
         Renderer r = GetComponent<Renderer>();
         r.material.shader = Shader.Find("BitshiftProgrammer/Liquid");
-        a = transform.GetComponent<Renderer>().material.GetFloat("_FillAmount");
+        //a = transform.GetComponent<Renderer>().material.GetFloat("_FillAmount");
         transform.GetComponent<Renderer>().material.SetFloat("_FillAmount", 1.6f);
         Debug.Log("Amount Value is" + a);
     }
@@ -18,6 +20,7 @@ public class FillLiquid : MonoBehaviour
     void Update()
     {
         FillA();
+        a--;
     }
 
     void FillA()
@@ -25,13 +28,14 @@ public class FillLiquid : MonoBehaviour
         
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.collider.gameObject.CompareTag("drink"))
-    //    {
-    //        a--;
-    //        if (a < )
-    //    }
-    //}
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.gameObject.CompareTag("drink"))
+        {
+            Debug.Log("À½·á Á¢ÃË");
+            a=transform.GetComponent<Renderer>().material.GetFloat("_FillAmount");
+            a--;
+        }
+    }
 
 }
