@@ -40,10 +40,12 @@ public class LayserPointer : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out Collided_object, raycastDistance))
         {
             layser.SetPosition(1, Collided_object.point);
+            /*
             if (Collided_object.collider.gameObject.CompareTag("MainMenu"))
             {
                 //layser.SetPosition(1, Collided_object.point);
             }
+            */
             //만약 스타트 버튼이면
             if (Collided_object.collider.gameObject.CompareTag("Start"))
             {

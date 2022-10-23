@@ -13,6 +13,8 @@ TagManager:
   - FluidPoint
   - MergeTest
   - Fruit
+  - RoomLight
+  - glass
   layers:
   - Default
   - TransparentFX

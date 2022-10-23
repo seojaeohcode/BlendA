@@ -21,8 +21,10 @@ public class DestroyFluid : MonoBehaviour
     {
         gameObject.transform.position = FluidPoint.transform.position;
 
-        isZ = ((Mathf.Abs(drink.transform.rotation.eulerAngles.z)%360) >= 60 && (Mathf.Abs(drink.transform.rotation.eulerAngles.z)%360) <= 270);
-        isX = ((Mathf.Abs(drink.transform.rotation.eulerAngles.x)%360) >= 60 && (Mathf.Abs(drink.transform.rotation.eulerAngles.x)%360) <= 270);
+        isZ = ((Mathf.Abs(drink.transform.rotation.eulerAngles.z)%360) >= 60 
+            && (Mathf.Abs(drink.transform.rotation.eulerAngles.z)%360) <= 270);
+        isX = ((Mathf.Abs(drink.transform.rotation.eulerAngles.x)%360) >= 60 
+            && (Mathf.Abs(drink.transform.rotation.eulerAngles.x)%360) <= 270);
 
         if (!(isX || isZ))
         {

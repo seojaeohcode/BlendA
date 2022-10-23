@@ -9,9 +9,13 @@ public class ButtonManager : MonoBehaviour
     {
         SceneManager.LoadScene("Main");
     }
-
+    
     public void GameQuit()
     {
-        Application.Quit();
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #else
+         Application.Quit();
+        #endif
     }
 }

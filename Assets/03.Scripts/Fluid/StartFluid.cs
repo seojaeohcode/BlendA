@@ -16,8 +16,10 @@ public class StartFluid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isZ = ((Mathf.Abs(gameObject.transform.rotation.eulerAngles.z) % 360) >= 60 && (Mathf.Abs(gameObject.transform.rotation.eulerAngles.z) % 360) <= 270);
-        isX = ((Mathf.Abs(gameObject.transform.rotation.eulerAngles.x) % 360) >= 60 && (Mathf.Abs(gameObject.transform.rotation.eulerAngles.x) % 360) <= 270);
+        isZ = ((Mathf.Abs(gameObject.transform.rotation.eulerAngles.z) % 360) >= 60 
+            && (Mathf.Abs(gameObject.transform.rotation.eulerAngles.z) % 360) <= 270);
+        isX = ((Mathf.Abs(gameObject.transform.rotation.eulerAngles.x) % 360) >= 60 
+            && (Mathf.Abs(gameObject.transform.rotation.eulerAngles.x) % 360) <= 270);
         //만약 술병이 기울었으면
         if (isX || isZ)
         {
@@ -35,7 +37,5 @@ public class StartFluid : MonoBehaviour
         {
             isFluid = false;
         }
-
-
     }
 }

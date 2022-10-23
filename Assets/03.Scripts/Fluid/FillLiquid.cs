@@ -7,7 +7,9 @@ public class FillLiquid : MonoBehaviour
 {
 
     float a;
-    float b;
+    //private RaycastHit hit; // √Êµπµ» ∞¥√º
+    //public float raycastDistance = 50f;
+    //float b;
     //private void OnParticleCollision(GameObject other)
     //{
     //    Debug.Log("¡¢√À«‘");
@@ -16,40 +18,54 @@ public class FillLiquid : MonoBehaviour
 
     void Start()
     {
-        Renderer r = GetComponent<Renderer>();
-        r.material.shader = Shader.Find("BitshiftProgrammer/Liquid");
-        a = transform.GetComponent<Renderer>().material.GetFloat("_FillAmount");
-        transform.GetComponent<Renderer>().material.SetFloat("_FillAmount", 1.6f);
-       Debug.Log("Amount Value is" + a);
+        //Renderer r = GetComponent<Renderer>();
+        //r.material.shader = Shader.Find("BitshiftProgrammer/Liquid");
+        //a = transform.GetComponent<Renderer>().material.GetFloat("_FillAmount");
+        //transform.GetComponent<Renderer>().material.SetFloat("_FillAmount", 1.6f);
+        //Debug.Log("Amount Value is" + a);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //FillA();
-        //a--;
+        /*
+        Debug.DrawRay(transform.position, transform.forward * raycastDistance, Color.green, 0.5f);
+
+        if (Physics.Raycast(transform.position, transform.forward, out hit, raycastDistance))
+        {
+            if (hit.collider.gameObject.CompareTag("glass"))
+            {
+                if (a > 0)
+                {
+                    a = a - 0.1f;
+                }
+                else
+                {
+                    a = 0;
+                }
+            }
+            //FillA();
+            //a--;
+        }
+        */
+        //void FillA()
+        //{
+
+        //}
+
+        //private void OnCollisionEnter(ObiCollider collision)
+        //{
+        //    if (collision.collider.gameObject.CompareTag("drink")) 
+        //    {
+        //        Debug.Log("¿Ω∑· ¡¢√À");
+        //        a=transform.GetComponent<Renderer>().material.GetFloat("_FillAmount");
+        //        a--;
+        //    }
+        //}
+
+        //void OnParticleCollision(GameObject other)
+        //{
+        //    Debug.Log("Particle hit!");
+        //}
     }
-
-    //void FillA()
-    //{
-        
-    //}
-
-    //private void OnCollisionEnter(ObiCollider collision)
-    //{
-    //    if (collision.collider.gameObject.CompareTag("drink")) 
-    //    {
-    //        Debug.Log("¿Ω∑· ¡¢√À");
-    //        a=transform.GetComponent<Renderer>().material.GetFloat("_FillAmount");
-    //        a--;
-    //    }
-    //}
-
-    //void OnParticleCollision(GameObject other)
-    //{
-    //    Debug.Log("Particle hit!");
-    //}
-
-    
-
 }
