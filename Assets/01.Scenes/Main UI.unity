@@ -1261,7 +1261,7 @@ GameObject:
   - component: {fileID: 901080428}
   - component: {fileID: 901080427}
   m_Layer: 5
-  m_Name: Img2
+  m_Name: Image2 - Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2930,7 +2930,7 @@ GameObject:
   - component: {fileID: 2053910604}
   - component: {fileID: 2053910603}
   m_Layer: 5
-  m_Name: Img1
+  m_Name: Image1 - white
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

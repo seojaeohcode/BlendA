@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/01.Scenes/Timer.unity
     guid: 1ebd3127451e68441b988e6bf52538ba
   - enabled: 1
-    path: Assets/01.Scenes/test.unity
+    path: Assets/01.Scenes/Main UI.unity
     guid: fed49ceb841492544b792c0ddec387a9
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 28ec1681d429df1488e57fec8e92589c, type: 2}
