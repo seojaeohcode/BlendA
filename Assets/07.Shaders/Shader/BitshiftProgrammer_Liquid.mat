@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - _FillAmount: 0
+    - _FillAmount: 1
     - _Rim: 0
     - _RimPower: 0
     - _WobbleX: 0

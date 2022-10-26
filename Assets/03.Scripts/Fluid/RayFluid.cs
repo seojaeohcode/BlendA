@@ -18,7 +18,7 @@ public class RayFluid : MonoBehaviour
         Renderer glassTR = glass.transform.GetComponent<Renderer>();
         glassR.material.shader = Shader.Find("BitshiftProgrammer/Liquid");
         a = glassTR.material.GetFloat("_FillAmount");
-        glassTR.material.SetFloat("_FillAmount", 0.9f);
+        glassTR.material.SetFloat("_FillAmount", 1.0f);
         Debug.Log(a);
     }
 
@@ -41,7 +41,49 @@ public class RayFluid : MonoBehaviour
         */
         //dir = dir.normalized;
         //dir = new Vector3(dir.x%360, dir.y % 360, dir.z % 360);
+        #region 레이 구동부
+        //Vector3 look = transform.TransformDirection(dir);
 
+        //Debug.DrawRay(transform.position, look * raycastDistance, Color.green, 0.5f);
+
+        //if (Physics.Raycast(transform.position, look, out hit, raycastDistance))
+        //{
+        //    if (hit.collider.gameObject.CompareTag("glass"))
+        //    {
+        //        Debug.Log("채워짐");
+        //        if (a > 0)
+        //        {
+        //            a -= 0.01f;
+        //            Renderer glassTR = glass.transform.GetComponent<Renderer>();
+        //            glassTR.material.SetFloat("_FillAmount", a);
+
+        //        }
+        //        else
+        //        {
+        //            a = 0;
+        //            Renderer glassTR = glass.transform.GetComponent<Renderer>();
+        //            glassTR.material.SetFloat("_FillAmount", a);
+        //        }
+        //    }
+        //}
+        //else
+        //{
+        //    /*
+        //    if (a < 1)
+        //    {
+        //        a += 0.1f;
+        //        Renderer glassTR = glass.transform.GetComponent<Renderer>();
+        //        glassTR.material.SetFloat("_FillAmount", a);
+        //    }
+        //    */
+        //}
+        #endregion
+
+        InvokeRepeating("RayFunction", 1.0f, 3.0f);
+    }
+
+    void RayFunction()
+    {
         Vector3 look = transform.TransformDirection(dir);
 
         Debug.DrawRay(transform.position, look * raycastDistance, Color.green, 0.5f);
@@ -56,6 +98,7 @@ public class RayFluid : MonoBehaviour
                     a -= 0.01f;
                     Renderer glassTR = glass.transform.GetComponent<Renderer>();
                     glassTR.material.SetFloat("_FillAmount", a);
+
                 }
                 else
                 {
@@ -65,16 +108,6 @@ public class RayFluid : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            /*
-            if (a < 1)
-            {
-                a += 0.1f;
-                Renderer glassTR = glass.transform.GetComponent<Renderer>();
-                glassTR.material.SetFloat("_FillAmount", a);
-            }
-            */
-        }
     }
+
 }
