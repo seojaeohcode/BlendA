@@ -5,13 +5,42 @@ using UnityEngine;
 public class DrinkManager : MonoBehaviour
 {
     //for in 은 사용고려.
-    public GameObject[] Tray = new GameObject[3];
-    public GameObject[] FruitList = new GameObject[2];
+    public GameObject[] FruitList = new GameObject[3];
     public GameObject[] AlcoholList = new GameObject[2];
-    public GameObject[] SyrupList = new GameObject[2];
+    //public GameObject[] SyrupList = new GameObject[2];
 
-    GameObject[] Ingrediant = new GameObject[3];
-    
+    //술에 담은 내용물 이걸 가지고 if문에서 판단.
+    GameObject[] Element = new GameObject[2];
+
+    /*
+    public class RecipeA
+    {
+        public GameObject Fruit;
+        public GameObject Drink;
+        public SetRecipeA()
+        {
+            Fruit = 
+        }
+    }
+
+    public class RecipeB
+    {
+        GameObject Fruit;
+        GameObject Drink;
+    }
+
+    public class RecipeC
+    {
+        GameObject Fruit;
+        GameObject Drink;
+    }
+
+    public class RecipeD
+    {
+        GameObject Fruit;
+        GameObject Drink;
+    }
+    */
 
     //public List<GameObject> FruitList = new List<GameObject>();
     //public List<GameObject> AlcoholList = new List<GameObject>();
@@ -47,12 +76,15 @@ public class DrinkManager : MonoBehaviour
         //ingrediant.AlcoholList.Add("AlcoholB");
         //ingrediant.SyrupList.Add("SyrupA");
         //ingrediant.SyrupList.Add("SyrupB");
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Element[0] == FruitList[0])
+        {
+
+        }
     }
 }
