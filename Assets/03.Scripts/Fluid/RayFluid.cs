@@ -95,7 +95,7 @@ public class RayFluid : MonoBehaviour
                 Debug.Log("Ã¤¿öÁü");
                 if (a > 0)
                 {
-                    a -= 0.01f;
+                    a -= 0.002f;
                     Renderer glassTR = glass.transform.GetComponent<Renderer>();
                     glassTR.material.SetFloat("_FillAmount", a);
 
