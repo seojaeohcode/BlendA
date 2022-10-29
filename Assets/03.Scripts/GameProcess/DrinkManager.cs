@@ -6,8 +6,8 @@ public class DrinkManager : MonoBehaviour
 {
     //for in 은 사용고려.
     public GameObject[] FruitList = new GameObject[3];
-    public GameObject[] AlcoholList = new GameObject[4];
-    //public GameObject[] SyrupList = new GameObject[2];
+    public GameObject[] AlcoholList = new GameObject[2];
+    public GameObject[] NonAlcoholList = new GameObject[2];
 
     //술에 담은 내용물 이걸 가지고 if문에서 판단.
     GameObject[] Element = new GameObject[2];
