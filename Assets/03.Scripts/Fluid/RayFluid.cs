@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class RayFluid : MonoBehaviour
 {
     float a;
     private RaycastHit hit; // 충돌된 객체
-    public float raycastDistance = 50f;
+    public float raycastDistance = 10f;
     public GameObject glass;
     public GameObject bottle;
     Vector3 dir = new Vector3(0, 1, 0);
@@ -80,14 +81,17 @@ public class RayFluid : MonoBehaviour
         #endregion
 
         InvokeRepeating("RayFunction", 1.0f, 3.0f);
+        
     }
 
     void RayFunction()
     {
         Vector3 look = transform.TransformDirection(dir);
 
-        Debug.DrawRay(transform.position, look * raycastDistance, Color.green, 0.5f);
+        //Debug.DrawRay(transform.position, look * raycastDistance, Color.green, 0.5f);
 
+        //if (Physics.Raycast(transform.position, look, out hit, raycastDistance))
+        //if(Physics.BoxCast(transform.position, transform.localScale, look, out hit, transform.parent.rotation, raycastDistance))
         if (Physics.Raycast(transform.position, look, out hit, raycastDistance))
         {
             if (hit.collider.gameObject.CompareTag("glass"))
@@ -109,5 +113,23 @@ public class RayFluid : MonoBehaviour
             }
         }
     }
-
+    /*
+    private void OnDrawGizmos()
+    {
+        Vector3 look = transform.TransformDirection(dir);
+        Gizmos.color = Color.green;
+        // Physics.BoxCast (레이저를 발사할 위치, 사각형의 각 좌표의 절판 크기, 발사 방향, 충돌 결과, 회전 각도, 최대 거리)
+        //레이 포인트의 포지션좌표,
+        if (Physics.BoxCast(transform.position, transform.localScale, look, out hit, transform.parent.rotation, raycastDistance))
+        {
+            Gizmos.DrawRay(transform.position, look);
+            Gizmos.DrawWireCube(transform.position + look * hit.distance, transform.localScale);
+            if (hit.collider.gameObject.CompareTag("glass"))
+            {
+                Gizmos.DrawRay(transform.position, look);
+                Gizmos.DrawWireCube(transform.position + look * hit.distance, transform.localScale);
+            }   
+        }
+    }
+    */
 }
