@@ -12,7 +12,7 @@ public class DrinkProcess : MonoBehaviour
     //public string DrinkType = "None";
     //술에 담은 내용물 이걸 가지고 if문에서 판단.
     //0:술 1:주스 2:과일
-    GameObject[] Element = new GameObject[3];
+    public GameObject[] Element = new GameObject[3];
 
     // Start is called before the first frame update
     void Start()

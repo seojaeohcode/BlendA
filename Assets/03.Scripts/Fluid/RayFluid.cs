@@ -97,6 +97,14 @@ public class RayFluid : MonoBehaviour
             if (hit.collider.gameObject.CompareTag("glass"))
             {
                 Debug.Log("채워짐");
+
+                //자기 자신의 태그나 레이어가 알콜인지 논알콜인지 체크.
+                if (GameObject.Find("Glass").GetComponent<DrinkProcess>().Element[0] == null)
+                {
+                    GameObject.Find("Glass").GetComponent<DrinkProcess>().Element[0] = transform.parent.gameObject;
+                    //들어온 술 오브젝트의 태그 체크
+                }
+                
                 if (a > 0)
                 {
                     a -= 0.002f;
