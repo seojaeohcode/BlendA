@@ -153,6 +153,7 @@ public class OVRController : MonoBehaviour
                 other.GetComponent<OutlineInteraction>().ShowOutline();
             }
         }
+
     }
 
     // 컨트롤러에 충돌한 오브젝트가 떼어졌을 때
@@ -174,5 +175,6 @@ public class OVRController : MonoBehaviour
                 other.GetComponent<OutlineInteraction>().HideOutline();
             }
         }
+
     }
 }

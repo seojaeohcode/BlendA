@@ -20,6 +20,9 @@ TagManager:
   - MapCollider
   - Cherry
   - CranberryJuice
+  - Alcohol
+  - NonAlcohol
+  - Complete
   layers:
   - Default
   - TransparentFX

@@ -97,13 +97,32 @@ public class RayFluid : MonoBehaviour
             if (hit.collider.gameObject.CompareTag("glass"))
             {
                 Debug.Log("채워짐");
-
-                //자기 자신의 태그나 레이어가 알콜인지 논알콜인지 체크.
-                if (GameObject.Find("Glass").GetComponent<DrinkProcess>().Element[0] == null)
+                if (this.gameObject.layer == LayerMask.NameToLayer("Alcohol"))
                 {
-                    GameObject.Find("Glass").GetComponent<DrinkProcess>().Element[0] = transform.parent.gameObject;
-                    //들어온 술 오브젝트의 태그 체크
+                    //자기 자신의 태그나 레이어가 알콜인지 논알콜인지 체크.
+                    if (GameObject.Find("Glass").GetComponent<DrinkProcess>().Element[0] == null)
+                    {
+                        GameObject.Find("Glass").GetComponent<DrinkProcess>().Element[0] = transform.parent.gameObject;
+                        //들어온 술 오브젝트의 태그 체크
+                    }
                 }
+
+                if (this.gameObject.layer == LayerMask.NameToLayer("NonAlcohol"))
+                {
+                    //자기 자신의 태그나 레이어가 알콜인지 논알콜인지 체크.
+                    if (GameObject.Find("Glass").GetComponent<DrinkProcess>().Element[1] == null)
+                    {
+                        GameObject.Find("Glass").GetComponent<DrinkProcess>().Element[1] = transform.parent.gameObject;
+                        //들어온 술 오브젝트의 태그 체크
+                    }
+                }
+
+                ////자기 자신의 태그나 레이어가 알콜인지 논알콜인지 체크.
+                //if (GameObject.Find("Glass").GetComponent<DrinkProcess>().Element[0] == null)
+                //{
+                //    GameObject.Find("Glass").GetComponent<DrinkProcess>().Element[0] = transform.parent.gameObject;
+                //    //들어온 술 오브젝트의 태그 체크
+                //}
                 
                 if (a > 0)
                 {
