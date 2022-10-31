@@ -129,6 +129,7 @@ public class DrinkProcess : MonoBehaviour
             {
                 if (Element[i] != null)
                 {
+                    
 
                     if (Element.SequenceEqual(HighBall) == true)
                     {
