@@ -23,6 +23,7 @@ TagManager:
   - Alcohol
   - NonAlcohol
   - Complete
+  - Chair
   layers:
   - Default
   - TransparentFX
