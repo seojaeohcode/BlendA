@@ -5,14 +5,14 @@ using UnityEngine.UI;
 using TMPro;
 public class MoveNpc : MonoBehaviour
 {
-
+    public GameObject GameManager;
     public GameObject target;
     public GameObject out_target;
     public Animator animator;
     public TextMeshProUGUI npc_ui;
     public bool IsSit = false;
     string[] QueryList = new string[] { "달콤한 것 주세요!", "과일향이 나는 양주 주세요!"};
-    string[] CorrectList = new string[] { "오렌지 주스", "잭다니엘" };
+    string[] CorrectList = new string[] { "HighBall", "HighBall" };
     int QueryIndex = -1;
     public string collect = "";
     public GameObject glass;
@@ -23,6 +23,7 @@ public class MoveNpc : MonoBehaviour
         //gameObject.transform.rotation = Quaternion.Euler(0, 270, 0);
         glass.GetComponent<DrinkProcess>().DrinkType = "None"; 
         npc_ui.text = "기다리세요..";
+        out_target.SetActive(false);
     }
 
     void Update()
@@ -93,12 +94,15 @@ public class MoveNpc : MonoBehaviour
             animator.SetBool("sitting", true);
             target.SetActive(false);
             IsSit = true;
+            out_target.SetActive(true);
         }
         else if (other.gameObject.CompareTag("OutPos"))
         {
             IsSit = false;
             Invoke("setChair", 0.5f);
             QueryIndex = -1;
+            out_target.SetActive(false);
+            GameManager.GetComponent<GameManager>().IsMan = !(GameManager.GetComponent<GameManager>().IsMan);
         }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroyFluid : MonoBehaviour
 {
-    public GameObject drink;
+    public GameObject RootDrink;
     public GameObject FluidPoint;
 
     public bool isX = false;
@@ -12,8 +12,8 @@ public class DestroyFluid : MonoBehaviour
 
     void Start()
     {
-        drink = GameObject.FindWithTag("Object");
-        FluidPoint = GameObject.FindWithTag("FluidPoint");
+        RootDrink = transform.parent.parent.gameObject;
+        FluidPoint = transform.parent.gameObject;
     }
 
     // Update is called once per frame
@@ -21,10 +21,10 @@ public class DestroyFluid : MonoBehaviour
     {
         gameObject.transform.position = FluidPoint.transform.position;
 
-        isZ = ((Mathf.Abs(drink.transform.rotation.eulerAngles.z)%360) >= 60 
-            && (Mathf.Abs(drink.transform.rotation.eulerAngles.z)%360) <= 270);
-        isX = ((Mathf.Abs(drink.transform.rotation.eulerAngles.x)%360) >= 60 
-            && (Mathf.Abs(drink.transform.rotation.eulerAngles.x)%360) <= 270);
+        isZ = ((Mathf.Abs(RootDrink.transform.rotation.eulerAngles.z)%360) >= 60 
+            && (Mathf.Abs(RootDrink.transform.rotation.eulerAngles.z)%360) <= 270);
+        isX = ((Mathf.Abs(RootDrink.transform.rotation.eulerAngles.x)%360) >= 60 
+            && (Mathf.Abs(RootDrink.transform.rotation.eulerAngles.x)%360) <= 270);
 
         if (!(isX || isZ))
         {

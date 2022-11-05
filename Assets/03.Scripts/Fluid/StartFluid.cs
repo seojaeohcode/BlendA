@@ -23,13 +23,13 @@ public class StartFluid : MonoBehaviour
         //만약 술병이 기울었으면
         if (isX || isZ)
         {
-            
             //액체 생성
             if (isFluid == false)
             {
                 Debug.Log("음료생성");
                 isFluid = true;
-                Instantiate(Obi, FluidPoint.position, Quaternion.Euler(0, 0, 0));
+                GameObject temp = Instantiate(Obi, FluidPoint.position, Quaternion.Euler(0, 0, 0));
+                temp.transform.SetParent(FluidPoint.transform);
             }
         }
         

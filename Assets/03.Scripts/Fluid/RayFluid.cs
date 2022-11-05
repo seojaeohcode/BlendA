@@ -88,7 +88,7 @@ public class RayFluid : MonoBehaviour
     {
         Vector3 look = transform.TransformDirection(dir);
 
-        //Debug.DrawRay(transform.position, look * raycastDistance, Color.green, 0.5f);
+        Debug.DrawRay(transform.position, look * raycastDistance, Color.green, 0.5f);
 
         //if (Physics.Raycast(transform.position, look, out hit, raycastDistance))
         //if(Physics.BoxCast(transform.position, transform.localScale, look, out hit, transform.parent.rotation, raycastDistance))
