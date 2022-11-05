@@ -11,8 +11,19 @@ public class MoveNpc : MonoBehaviour
     public Animator animator;
     public TextMeshProUGUI npc_ui;
     public bool IsSit = false;
-    string[] QueryList = new string[] { "달콤한 것 주세요!", "과일향이 나는 양주 주세요!"};
-    string[] CorrectList = new string[] { "HighBall", "HighBall" };
+    string[] QueryList = new string[] { "음...달콤한게 좋겠어요!", "부드럽고 과일향이 나는 양주가 좋겠네요!","부드러운 양주에 달콤한것을 섞어주세요!",
+        "양주인데... 주스 맛도 났던거같아요!","오렌지가 올라갔고 부드러운 양주와 주스맛이 났던거같아요!","부드러운 양주에 달콤한것을 섞고 라임을 올려주세요!",
+    "달콤한주스에 라임을 올려주세요!","아주 센술을 먹고싶어요!","오렌지가 올라간 아주 센 술을 먹고싶어요!",
+    "저는 아주 깨끗한 색의 술을 좋아해요!","새콤달콤한 과일과 양주가 있었던거 같아요","그 술은...아주 신맛의 과일과 달콤한 양주맛이 났어요!",
+    "저는 술을 안좋아하고 새콤달콤한 과일이 좋아요","그 술은 아주 쓴데도 좋더라구요!!","아마... 체리가 있던 부드러운 양주일거에요!",
+    };
+    
+    string[] CorrectList = new string[] { "OrangJuice", "Jack","JackJuice"
+    ,"JackJuice","OrangeJackJuice","LimeJackJuice",
+    "LimeJuice","JackVodka","OrangeJackVodka",
+    "Vodka","CherryJack","LimeJack",
+    "CherryJuice","Vodka","CherryJack",};
+
     int QueryIndex = -1;
     public string collect = "";
     public GameObject glass;
@@ -39,7 +50,7 @@ public class MoveNpc : MonoBehaviour
 
         if (IsSit && (QueryIndex==-1))
         {
-            QueryIndex = ((int)Random.Range(0f, 2f));
+            QueryIndex = ((int)Random.Range(0f, 12f));
             npc_ui.text = QueryList[QueryIndex];
             collect = CorrectList[QueryIndex];
         }
