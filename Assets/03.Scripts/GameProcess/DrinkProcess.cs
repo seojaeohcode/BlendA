@@ -112,6 +112,8 @@ public class DrinkProcess : MonoBehaviour
         //완성품 비교------------------------------------------------------------------------
         if (other.gameObject.CompareTag("Complete"))
         {
+            Debug.Log("컴플리트");
+            /*
             if (Element[0] == null)
             {
                 Debug.Log("0번 비엇음");
@@ -124,13 +126,12 @@ public class DrinkProcess : MonoBehaviour
             {
                 Debug.Log("3번 비엇음");
             }
-            
+            */
+            /*
             for (int i = 0; i < 3; i++)
             {
                 if (Element[i] != null)
                 {
-                    
-
                     if (Element.SequenceEqual(HighBall) == true)
                     {
                         Debug.Log("하이볼 정답");
@@ -152,7 +153,36 @@ public class DrinkProcess : MonoBehaviour
                     }
                 }
             }
-
+            */
+            if (Element.SequenceEqual(HighBall) == true)
+            {
+                Debug.Log("하이볼 정답");
+                DrinkType = "HighBall";
+                this.transform.position = nowPosition;
+                //Element = new GameObject[3];
+                for (int i = 0; i < 3; i++)
+                {
+                    Element[i] = null;
+                }
+            }
+            /*
+            else if (Element.SequenceEqual(ScrewDriver) == true)
+            {
+                Debug.Log("스크류드라이버 정답");
+                DrinkType = "ScrewDriver";
+                this.transform.position = nowPosition;
+                Element = new GameObject[3];
+            }
+            */
+            else
+            {
+                Debug.Log("실패");
+                DrinkType = "Fail";
+                for (int i = 0; i < 3; i++)
+                {
+                    Element[i] = null;
+                }
+            }
         }
         //----------------------------------------------------------------
 
