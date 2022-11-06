@@ -18,8 +18,19 @@ public class DrinkProcess : MonoBehaviour
     //0:술 1:주스 2:과일
     public GameObject[] Element = new GameObject[3];
 
-    public GameObject[] HighBall = new GameObject[3];
-    public GameObject[] ScrewDriver = new GameObject[3];
+    public GameObject[] OrangeJuice = new GameObject[3];
+    public GameObject[] Jack = new GameObject[3];
+    public GameObject[] Vodka = new GameObject[3];
+    public GameObject[] JackJuice = new GameObject[3];
+    public GameObject[] JackVodka = new GameObject[3];
+    public GameObject[] OrangeJackJuice = new GameObject[3];
+    public GameObject[] OrangeJackVodka = new GameObject[3];
+    public GameObject[] LimeJack = new GameObject[3];
+    public GameObject[] LimeJackJuice = new GameObject[3];
+    public GameObject[] LimeJuice = new GameObject[3];
+    public GameObject[] CherryJack = new GameObject[3];
+    public GameObject[] CherryJuice = new GameObject[3];
+
     public Vector3 nowPosition;
 
 
@@ -154,10 +165,21 @@ public class DrinkProcess : MonoBehaviour
                 }
             }
             */
-            if (Element.SequenceEqual(HighBall) == true)
+            if (Element.SequenceEqual(OrangeJuice) == true)
             {
-                Debug.Log("하이볼 정답");
-                DrinkType = "HighBall";
+                
+                DrinkType = "OrangeJuice";
+                this.transform.position = nowPosition;
+                //Element = new GameObject[3];
+                for (int i = 0; i < 3; i++)
+                {
+                    Element[i] = null;
+                }
+            }           
+            else if (Element.SequenceEqual(Jack) == true)
+            {
+                
+                DrinkType = "Jack";
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
                 for (int i = 0; i < 3; i++)
@@ -165,11 +187,10 @@ public class DrinkProcess : MonoBehaviour
                     Element[i] = null;
                 }
             }
-            
-            else if (Element.SequenceEqual(ScrewDriver) == true)
+            else if (Element.SequenceEqual(Vodka) == true)
             {
-                Debug.Log("스크류드라이버 정답");
-                DrinkType = "ScrewDriver";
+
+                DrinkType = "Vodka";
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
                 for (int i = 0; i < 3; i++)
@@ -177,7 +198,105 @@ public class DrinkProcess : MonoBehaviour
                     Element[i] = null;
                 }
             }
-            
+            else if (Element.SequenceEqual(JackJuice) == true)
+            {
+
+                DrinkType = "JackJuice";
+                this.transform.position = nowPosition;
+                //Element = new GameObject[3];
+                for (int i = 0; i < 3; i++)
+                {
+                    Element[i] = null;
+                }
+            }
+            else if (Element.SequenceEqual(JackVodka) == true)
+            {
+
+                DrinkType = "JackVodka";
+                this.transform.position = nowPosition;
+                //Element = new GameObject[3];
+                for (int i = 0; i < 3; i++)
+                {
+                    Element[i] = null;
+                }
+            }
+            else if (Element.SequenceEqual(OrangeJackJuice) == true)
+            {
+
+                DrinkType = "OrangeJackJuice";
+                this.transform.position = nowPosition;
+                //Element = new GameObject[3];
+                for (int i = 0; i < 3; i++)
+                {
+                    Element[i] = null;
+                }
+            }
+            else if (Element.SequenceEqual(OrangeJackVodka) == true)
+            {
+
+                DrinkType = "OrangeJackVodka";
+                this.transform.position = nowPosition;
+                //Element = new GameObject[3];
+                for (int i = 0; i < 3; i++)
+                {
+                    Element[i] = null;
+                }
+            }
+            else if (Element.SequenceEqual(LimeJack) == true)
+            {
+
+                DrinkType = "LimeJack";
+                this.transform.position = nowPosition;
+                //Element = new GameObject[3];
+                for (int i = 0; i < 3; i++)
+                {
+                    Element[i] = null;
+                }
+            }
+            else if (Element.SequenceEqual(LimeJackJuice) == true)
+            {
+
+                DrinkType = "LimeJackJuice";
+                this.transform.position = nowPosition;
+                //Element = new GameObject[3];
+                for (int i = 0; i < 3; i++)
+                {
+                    Element[i] = null;
+                }
+            }
+            else if (Element.SequenceEqual(LimeJuice) == true)
+            {
+
+                DrinkType = "LimeJuice";
+                this.transform.position = nowPosition;
+                //Element = new GameObject[3];
+                for (int i = 0; i < 3; i++)
+                {
+                    Element[i] = null;
+                }
+            }
+            else if (Element.SequenceEqual(CherryJack) == true)
+            {
+
+                DrinkType = "CherryJack";
+                this.transform.position = nowPosition;
+                //Element = new GameObject[3];
+                for (int i = 0; i < 3; i++)
+                {
+                    Element[i] = null;
+                }
+            }
+            else if (Element.SequenceEqual(CherryJuice) == true)
+            {
+
+                DrinkType = "CherryJuice";
+                this.transform.position = nowPosition;
+                //Element = new GameObject[3];
+                for (int i = 0; i < 3; i++)
+                {
+                    Element[i] = null;
+                }
+            }
             else
             {
                 Debug.Log("실패");
