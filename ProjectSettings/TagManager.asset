@@ -25,6 +25,7 @@ TagManager:
   - Complete
   - Chair
   - OutPos
+  - Lemon
   layers:
   - Default
   - TransparentFX

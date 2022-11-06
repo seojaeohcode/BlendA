@@ -165,15 +165,19 @@ public class DrinkProcess : MonoBehaviour
                     Element[i] = null;
                 }
             }
-            /*
+            
             else if (Element.SequenceEqual(ScrewDriver) == true)
             {
                 Debug.Log("스크류드라이버 정답");
                 DrinkType = "ScrewDriver";
                 this.transform.position = nowPosition;
-                Element = new GameObject[3];
+                //Element = new GameObject[3];
+                for (int i = 0; i < 3; i++)
+                {
+                    Element[i] = null;
+                }
             }
-            */
+            
             else
             {
                 Debug.Log("실패");
@@ -217,6 +221,17 @@ public class DrinkProcess : MonoBehaviour
                 temp.transform.SetParent(FruitPoint.transform);
             }
         }
+        //레몬 추가시 사용
+        //else if (other.gameObject.CompareTag("Lemon"))
+        //{
+        //    Debug.Log("레몬충돌");
+        //    if (Element[2] == null)
+        //    {
+        //        Element[2] = FruitList[3];
+        //        GameObject temp = Instantiate(Element[2], FruitPoint.transform.position, cur);
+        //        temp.transform.SetParent(FruitPoint.transform);
+        //    }
+        //}
 
         //Element 내부 원소에 null이 있으면 스크립트 비활성
         //if (other.gameObject.CompareTag("Complete"))
