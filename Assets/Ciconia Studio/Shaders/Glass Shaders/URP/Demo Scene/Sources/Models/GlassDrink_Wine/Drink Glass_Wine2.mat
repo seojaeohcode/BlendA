@@ -9,8 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Drink Glass_Wine2
   m_Shader: {fileID: 4800000, guid: 9ecf50081160c314ab71626f0f23ed7c, type: 3}
-  m_ShaderKeywords: _FALLOFFOPACITY_ON _FRESNELONOFF_ON
-  m_LightmapFlags: 0
+  m_ShaderKeywords: _FRESNELONOFF_ON _USESMOOTHNESS_ON
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -36,7 +36,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: fda7b73dcf4849446ab582d41a69ff4a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -56,16 +56,20 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AlphaCutoff: 0.5
     - _Ambientlight: 1
     - _AoIntensity: 0
     - _BlurReflection: 0
-    - _Brightness: 1
+    - _Brightness: 2
     - _BumpScale: 0
     - _BumpScaleDecal: 0.1
     - _BumpScaleDecal1: 0
     - _ChromaticAberration: 0.037
+    - _Cull: 2
+    - _EmissionIntensity: 1
     - _EmissiveIntensity: 1
-    - _FalloffOpacity: 1
+    - _FalloffOpacity: 0
+    - _FalloffOpacityIntensity: 1
     - _FresnelStrength: 0.4
     - _Glossiness: 1
     - _GlossinessDecal: 0.5
@@ -75,22 +79,30 @@ Material:
     - _InvertAlbedoA: 0
     - _Metallic: 0.1
     - _MetallicDecal: 0.2
-    - _Opacity: 0.607
+    - _OffsetX: 0
+    - _OffsetY: 0
+    - _Opacity: 0.5
     - _Power1: 1.37
+    - _PowerFalloffOpacity: 1
+    - _PowerFresnel: 1
     - _ReflectionDecal: 0
     - _ReflectionIntensity: 0.22
     - _Rotation: 0
-    - _Saturation: 0
+    - _Saturation: 2
     - _SaturationDecal: 0
     - _TilingX: 1
     - _TilingY: 1
     - _UseAlbedoA: 0
-    - _UseSmoothness: 0
+    - _UseCubemap: 1
+    - _UseSmoothness: 1
     - _Weight: 1
+    - _ZWrite: 1
     - __dirty: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 0}
     - _ColorCubemap: {r: 1, g: 1, b: 1, a: 1}
     - _ColorDecal: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorFresnel: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _SecondaryColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BuildTextureStacks: []
