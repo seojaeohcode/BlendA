@@ -16,20 +16,20 @@ public class DrinkProcess : MonoBehaviour
     
     //술에 담은 내용물 이걸 가지고 if문에서 판단.
     //0:술 1:주스 2:과일
-    public GameObject[] Element = new GameObject[3];
+    public GameObject[] Element = new GameObject[4];
 
-    public GameObject[] OrangeJuice = new GameObject[3];
-    public GameObject[] Jack = new GameObject[3];
-    public GameObject[] Vodka = new GameObject[3];
-    public GameObject[] JackJuice = new GameObject[3];
-    public GameObject[] JackVodka = new GameObject[3];
-    public GameObject[] OrangeJackJuice = new GameObject[3];
-    public GameObject[] OrangeJackVodka = new GameObject[3];
-    public GameObject[] LimeJack = new GameObject[3];
-    public GameObject[] LimeJackJuice = new GameObject[3];
-    public GameObject[] LimeJuice = new GameObject[3];
-    public GameObject[] CherryJack = new GameObject[3];
-    public GameObject[] CherryJuice = new GameObject[3];
+    public GameObject[] OrangeJuice = new GameObject[4];
+    public GameObject[] Jack = new GameObject[4];
+    public GameObject[] Vodka = new GameObject[4];
+    public GameObject[] JackJuice = new GameObject[4];
+    public GameObject[] JackVodka = new GameObject[4];
+    public GameObject[] OrangeJackJuice = new GameObject[4];
+    public GameObject[] OrangeJackVodka = new GameObject[4];
+    public GameObject[] LimeJack = new GameObject[4];
+    public GameObject[] LimeJackJuice = new GameObject[4];
+    public GameObject[] LimeJuice = new GameObject[4];
+    public GameObject[] CherryJack = new GameObject[4];
+    public GameObject[] CherryJuice = new GameObject[4];
 
     public Vector3 nowPosition;
 
