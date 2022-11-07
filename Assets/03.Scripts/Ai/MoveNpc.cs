@@ -31,7 +31,7 @@ public class MoveNpc : MonoBehaviour
 
     void Start()
     {
-        //gameObject.transform.rotation = Quaternion.Euler(0, 270, 0);
+        
         glass.GetComponent<DrinkProcess>().DrinkType = "None"; 
         npc_ui.text = "기다리세요..";
         out_target.SetActive(false);
@@ -78,7 +78,7 @@ public class MoveNpc : MonoBehaviour
         gameObject.transform.rotation = Quaternion.Euler(0, 270, 0);
         if (target.transform.position != Vector3.MoveTowards(transform.position, target.transform.position, 1f))
         {
-            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, 0.06f); // 현위치, 도착점, 속도
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, 6f * Time.deltaTime); // 현위치, 도착점, 속도
         }
     }
     void MoveToOut()
@@ -87,8 +87,8 @@ public class MoveNpc : MonoBehaviour
         gameObject.transform.rotation = Quaternion.Euler(0, 90, 0);
         if (out_target.transform.position != Vector3.MoveTowards(transform.position, out_target.transform.position, 1f))
         {
-            Debug.Log("움직임.");
-            transform.position = Vector3.MoveTowards(transform.position, out_target.transform.position, 0.06f); // 현위치, 도착점, 속도
+            //Debug.Log("움직임.");
+            transform.position = Vector3.MoveTowards(transform.position, out_target.transform.position, 6f * Time.deltaTime); // 현위치, 도착점, 속도
         }
         npc_ui.text = "다음차례...";
     }

@@ -15,7 +15,7 @@ public class DrinkProcess : MonoBehaviour
     //public string DrinkType = "None";
     
     //술에 담은 내용물 이걸 가지고 if문에서 판단.
-    //0:술 1:주스 2:과일
+    //0:술 1:주스 2:과일 4:추가 술
     public GameObject[] Element = new GameObject[4];
 
     public GameObject[] OrangeJuice = new GameObject[4];

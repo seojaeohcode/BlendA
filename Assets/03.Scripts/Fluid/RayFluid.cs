@@ -20,7 +20,7 @@ public class RayFluid : MonoBehaviour
         glassR.material.shader = Shader.Find("BitshiftProgrammer/Liquid");
         a = glassTR.material.GetFloat("_FillAmount");
         glassTR.material.SetFloat("_FillAmount", 1.0f);
-        Debug.Log(a);
+        //Debug.Log(a);
     }
 
     // Update is called once per frame
