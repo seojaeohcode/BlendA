@@ -153,6 +153,62 @@ public class OVRController : MonoBehaviour
                 other.GetComponent<OutlineInteraction>().ShowOutline();
             }
         }
+        else if(other.CompareTag("glass"))
+        {
+            //attachedObject = other.GetComponent<Rigidbody>();
+
+            // 배열에 충돌체를 저장
+            contactRigidbodies.Add(other.GetComponent<Rigidbody>());
+
+            // 아직 컨트롤러에 부착되지 않았다면
+            if (!isAttached)
+            {
+                // 충돌한 게임 오브젝트의 아웃라인을 활성화 한다.
+                other.GetComponent<OutlineInteraction>().ShowOutline();
+            }
+        }
+        else if(other.CompareTag("Orange"))
+        {
+            //attachedObject = other.GetComponent<Rigidbody>();
+
+            // 배열에 충돌체를 저장
+            contactRigidbodies.Add(other.GetComponent<Rigidbody>());
+
+            // 아직 컨트롤러에 부착되지 않았다면
+            if (!isAttached)
+            {
+                // 충돌한 게임 오브젝트의 아웃라인을 활성화 한다.
+                other.GetComponent<OutlineInteraction>().ShowOutline();
+            }
+        }
+        else if (other.CompareTag("Cherry"))
+        {
+            //attachedObject = other.GetComponent<Rigidbody>();
+
+            // 배열에 충돌체를 저장
+            contactRigidbodies.Add(other.GetComponent<Rigidbody>());
+
+            // 아직 컨트롤러에 부착되지 않았다면
+            if (!isAttached)
+            {
+                // 충돌한 게임 오브젝트의 아웃라인을 활성화 한다.
+                other.GetComponent<OutlineInteraction>().ShowOutline();
+            }
+        }
+        else if(other.CompareTag("Lime"))
+        {
+            //attachedObject = other.GetComponent<Rigidbody>();
+
+            // 배열에 충돌체를 저장
+            contactRigidbodies.Add(other.GetComponent<Rigidbody>());
+
+            // 아직 컨트롤러에 부착되지 않았다면
+            if (!isAttached)
+            {
+                // 충돌한 게임 오브젝트의 아웃라인을 활성화 한다.
+                other.GetComponent<OutlineInteraction>().ShowOutline();
+            }
+        }
 
     }
 
@@ -175,6 +231,63 @@ public class OVRController : MonoBehaviour
                 other.GetComponent<OutlineInteraction>().HideOutline();
             }
         }
+        else if (other.CompareTag("glass"))
+        {
+            //attachedObject = null;
+
+            // 배열에 충돌체를 제거
+            contactRigidbodies.Remove(other.GetComponent<Rigidbody>());
+
+            // 아직 컨트롤러에 부착되지 않았다면
+            if (!isAttached)
+            {
+                // 충돌한 게임 오브젝트의 아웃라인을 비활성화 한다.
+                other.GetComponent<OutlineInteraction>().HideOutline();
+            }
+        }
+        else if(other.CompareTag("Orange"))
+        {
+            //attachedObject = null;
+
+            // 배열에 충돌체를 제거
+            contactRigidbodies.Remove(other.GetComponent<Rigidbody>());
+
+            // 아직 컨트롤러에 부착되지 않았다면
+            if (!isAttached)
+            {
+                // 충돌한 게임 오브젝트의 아웃라인을 비활성화 한다.
+                other.GetComponent<OutlineInteraction>().HideOutline();
+            }
+        }
+        else if(other.CompareTag("Cherry"))
+        {
+            //attachedObject = null;
+
+            // 배열에 충돌체를 제거
+            contactRigidbodies.Remove(other.GetComponent<Rigidbody>());
+
+            // 아직 컨트롤러에 부착되지 않았다면
+            if (!isAttached)
+            {
+                // 충돌한 게임 오브젝트의 아웃라인을 비활성화 한다.
+                other.GetComponent<OutlineInteraction>().HideOutline();
+            }
+        }
+        else if(other.CompareTag("Lime"))
+        {
+            //attachedObject = null;
+
+            // 배열에 충돌체를 제거
+            contactRigidbodies.Remove(other.GetComponent<Rigidbody>());
+
+            // 아직 컨트롤러에 부착되지 않았다면
+            if (!isAttached)
+            {
+                // 충돌한 게임 오브젝트의 아웃라인을 비활성화 한다.
+                other.GetComponent<OutlineInteraction>().HideOutline();
+            }
+        }
+
 
     }
 }
