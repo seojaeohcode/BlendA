@@ -105,7 +105,8 @@ public class RayFluid : MonoBehaviour
                         GameObject.Find("Glass").GetComponent<DrinkProcess>().Element[0] = transform.parent.gameObject;
                         //들어온 술 오브젝트의 태그 체크
                     }
-                    if (GameObject.Find("Glass").GetComponent<DrinkProcess>().Element[0] != null)
+                    if (GameObject.Find("Glass").GetComponent<DrinkProcess>().Element[0] != null 
+                        && GameObject.Find("Glass").GetComponent<DrinkProcess>().Element[0] != transform.parent.gameObject)
                     {
                         GameObject.Find("Glass").GetComponent<DrinkProcess>().Element[3] = transform.parent.gameObject;
                     }

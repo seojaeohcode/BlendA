@@ -32978,7 +32978,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -106}
-  m_SizeDelta: {x: 121.7, y: 110.01}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1477051696
 MonoBehaviour:
@@ -35976,10 +35976,10 @@ RectTransform:
   m_Father: {fileID: 1477051695}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 60.85, y: -52.505}
-  m_SizeDelta: {x: 61.699997, y: 15.01}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1643408889
 MonoBehaviour:
@@ -55180,7 +55180,7 @@ MonoBehaviour:
   - {fileID: 7243552230862616175}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 7243552230862616175}
+  - {fileID: 0}
   Vodka:
   - {fileID: 919132149455206796}
   - {fileID: 0}
@@ -55190,7 +55190,7 @@ MonoBehaviour:
   - {fileID: 7243552230862616175}
   - {fileID: 4920612949876410806}
   - {fileID: 0}
-  - {fileID: 7243552230862616175}
+  - {fileID: 0}
   JackVodka:
   - {fileID: 7243552230862616175}
   - {fileID: 0}
@@ -55200,7 +55200,7 @@ MonoBehaviour:
   - {fileID: 7243552230862616175}
   - {fileID: 4920612949876410806}
   - {fileID: 1991928592625270415, guid: b1eb35544835ed54bbf8c915ffb6dcba, type: 3}
-  - {fileID: 7243552230862616175}
+  - {fileID: 0}
   OrangeJackVodka:
   - {fileID: 7243552230862616175}
   - {fileID: 0}
@@ -55215,7 +55215,7 @@ MonoBehaviour:
   - {fileID: 7243552230862616175}
   - {fileID: 4920612949876410806}
   - {fileID: 8484328225148924991, guid: 79942d1f4381d494e86acf3ab20c6b49, type: 3}
-  - {fileID: 7243552230862616175}
+  - {fileID: 0}
   LimeJuice:
   - {fileID: 0}
   - {fileID: 4920612949876410806}
