@@ -39,6 +39,8 @@ public class DrinkProcess : MonoBehaviour
 
     public Vector3 nowPosition;
 
+    
+
 
     // Start is called before the first frame update
     private void Awake()
@@ -203,6 +205,7 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
+                
             }
             else if (Element.SequenceEqual(Vodka) == true)
             {
@@ -241,7 +244,7 @@ public class DrinkProcess : MonoBehaviour
                     Element[i] = null;
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
-                glassTR.material.SetFloat("_FillAmount", 1);
+                glassTR.material.SetFloat("_FillAmount", 1);                
             }
             else if (Element.SequenceEqual(OrangeJackJuice) == true)
             {
@@ -255,6 +258,9 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
+                DeleteChilds();
+
+
             }
             else if (Element.SequenceEqual(OrangeJackVodka) == true)
             {
@@ -268,6 +274,8 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
+                DeleteChilds();
+
             }
             else if (Element.SequenceEqual(LimeJack) == true)
             {
@@ -281,6 +289,8 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
+                DeleteChilds();
+
             }
             else if (Element.SequenceEqual(LimeJackJuice) == true)
             {
@@ -294,6 +304,8 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
+                DeleteChilds();
+
             }
             else if (Element.SequenceEqual(LimeJuice) == true)
             {
@@ -307,6 +319,8 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
+                DeleteChilds();
+
             }
             else if (Element.SequenceEqual(CherryJack) == true)
             {
@@ -320,6 +334,8 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
+                DeleteChilds();
+
             }
             else if (Element.SequenceEqual(CherryJuice) == true)
             {
@@ -333,6 +349,8 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
+                DeleteChilds();
+
             }
             else
             {
@@ -344,6 +362,7 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
+                DeleteChilds();
             }
         }
         //----------------------------------------------------------------
@@ -436,8 +455,18 @@ public class DrinkProcess : MonoBehaviour
         //    }
 
         //}
+        
+
 
     }
-    
-    
+
+    public void DeleteChilds()
+    {       
+        for (int i = 0; i < FruitPoint.transform.childCount; i++)
+        {
+            Destroy(FruitPoint.transform.GetChild(i).gameObject);
+        }
+    }
+
+
 }
