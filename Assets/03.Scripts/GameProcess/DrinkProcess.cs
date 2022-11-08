@@ -5,6 +5,12 @@ using System.Linq;
 
 public class DrinkProcess : MonoBehaviour
 {
+    // 쉐이더 접근 변수
+    float a;
+    public GameObject glass;
+    //Renderer glassR = glass.GetComponent<Renderer>();
+    //Renderer glassTR = glass.transform.GetComponent<Renderer>();
+
     public GameObject[] FruitList = new GameObject[3];
     //public GameObject[] AlcoholList = new GameObject[2];
     //public GameObject[] NonAlcoholList = new GameObject[2];
@@ -45,6 +51,12 @@ public class DrinkProcess : MonoBehaviour
         {
             Element[i] = null;
         }
+
+        //쉐이더 접근
+        Renderer glassR = glass.GetComponent<Renderer>();
+        Renderer glassTR = glass.transform.GetComponent<Renderer>();
+        glassR.material.shader = Shader.Find("BitshiftProgrammer/Liquid");
+        a = glassTR.material.GetFloat("_FillAmount");
     }
 
     // Update is called once per frame
@@ -175,6 +187,9 @@ public class DrinkProcess : MonoBehaviour
                 {
                     Element[i] = null;
                 }
+                Renderer glassTR = glass.transform.GetComponent<Renderer>();
+                glassTR.material.SetFloat("_FillAmount", 1);
+
             }           
             else if (Element.SequenceEqual(Jack) == true)
             {
@@ -186,6 +201,8 @@ public class DrinkProcess : MonoBehaviour
                 {
                     Element[i] = null;
                 }
+                Renderer glassTR = glass.transform.GetComponent<Renderer>();
+                glassTR.material.SetFloat("_FillAmount", 1);
             }
             else if (Element.SequenceEqual(Vodka) == true)
             {
@@ -197,6 +214,8 @@ public class DrinkProcess : MonoBehaviour
                 {
                     Element[i] = null;
                 }
+                Renderer glassTR = glass.transform.GetComponent<Renderer>();
+                glassTR.material.SetFloat("_FillAmount", 1);
             }
             else if (Element.SequenceEqual(JackJuice) == true)
             {
@@ -208,6 +227,8 @@ public class DrinkProcess : MonoBehaviour
                 {
                     Element[i] = null;
                 }
+                Renderer glassTR = glass.transform.GetComponent<Renderer>();
+                glassTR.material.SetFloat("_FillAmount", 1);
             }
             else if (Element.SequenceEqual(JackVodka) == true)
             {
@@ -219,6 +240,8 @@ public class DrinkProcess : MonoBehaviour
                 {
                     Element[i] = null;
                 }
+                Renderer glassTR = glass.transform.GetComponent<Renderer>();
+                glassTR.material.SetFloat("_FillAmount", 1);
             }
             else if (Element.SequenceEqual(OrangeJackJuice) == true)
             {
@@ -230,6 +253,8 @@ public class DrinkProcess : MonoBehaviour
                 {
                     Element[i] = null;
                 }
+                Renderer glassTR = glass.transform.GetComponent<Renderer>();
+                glassTR.material.SetFloat("_FillAmount", 1);
             }
             else if (Element.SequenceEqual(OrangeJackVodka) == true)
             {
@@ -241,6 +266,8 @@ public class DrinkProcess : MonoBehaviour
                 {
                     Element[i] = null;
                 }
+                Renderer glassTR = glass.transform.GetComponent<Renderer>();
+                glassTR.material.SetFloat("_FillAmount", 1);
             }
             else if (Element.SequenceEqual(LimeJack) == true)
             {
@@ -252,6 +279,8 @@ public class DrinkProcess : MonoBehaviour
                 {
                     Element[i] = null;
                 }
+                Renderer glassTR = glass.transform.GetComponent<Renderer>();
+                glassTR.material.SetFloat("_FillAmount", 1);
             }
             else if (Element.SequenceEqual(LimeJackJuice) == true)
             {
@@ -263,6 +292,8 @@ public class DrinkProcess : MonoBehaviour
                 {
                     Element[i] = null;
                 }
+                Renderer glassTR = glass.transform.GetComponent<Renderer>();
+                glassTR.material.SetFloat("_FillAmount", 1);
             }
             else if (Element.SequenceEqual(LimeJuice) == true)
             {
@@ -274,6 +305,8 @@ public class DrinkProcess : MonoBehaviour
                 {
                     Element[i] = null;
                 }
+                Renderer glassTR = glass.transform.GetComponent<Renderer>();
+                glassTR.material.SetFloat("_FillAmount", 1);
             }
             else if (Element.SequenceEqual(CherryJack) == true)
             {
@@ -285,6 +318,8 @@ public class DrinkProcess : MonoBehaviour
                 {
                     Element[i] = null;
                 }
+                Renderer glassTR = glass.transform.GetComponent<Renderer>();
+                glassTR.material.SetFloat("_FillAmount", 1);
             }
             else if (Element.SequenceEqual(CherryJuice) == true)
             {
@@ -296,6 +331,8 @@ public class DrinkProcess : MonoBehaviour
                 {
                     Element[i] = null;
                 }
+                Renderer glassTR = glass.transform.GetComponent<Renderer>();
+                glassTR.material.SetFloat("_FillAmount", 1);
             }
             else
             {
@@ -305,6 +342,8 @@ public class DrinkProcess : MonoBehaviour
                 {
                     Element[i] = null;
                 }
+                Renderer glassTR = glass.transform.GetComponent<Renderer>();
+                glassTR.material.SetFloat("_FillAmount", 1);
             }
         }
         //----------------------------------------------------------------

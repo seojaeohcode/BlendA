@@ -3613,6 +3613,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176334385}
   m_CullTransparentMesh: 1
+--- !u!1 &178434147 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f5c37c7f5ccd814496d2baf517c413f, type: 3}
+  m_PrefabInstance: {fileID: 1984606129}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &178434150
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178434147}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.77872914, y: 0.18249208, z: 1.1557382}
+  m_Center: {x: 0, y: 0.08527908, z: 0}
 --- !u!4 &187320180 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5022919100307923220, guid: 61c356e32924a7840a3be64a11d60199, type: 3}
@@ -8953,6 +8971,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0f5c37c7f5ccd814496d2baf517c413f, type: 3}
       propertyPath: m_Name
       value: Tray (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0f5c37c7f5ccd814496d2baf517c413f, type: 3}
+      propertyPath: m_TagString
+      value: Cherry
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f5c37c7f5ccd814496d2baf517c413f, type: 3}
@@ -17272,6 +17294,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7634548269885302004, guid: 1dc4eb0da0b707445b4b31238dd6cba2, type: 3}
   m_PrefabInstance: {fileID: 730766060}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &734144611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f5c37c7f5ccd814496d2baf517c413f, type: 3}
+  m_PrefabInstance: {fileID: 399832508}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &734144614
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734144611}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.77872914, y: 0.14894849, z: 1.1557382}
+  m_Center: {x: 0, y: 0.068507284, z: 0}
 --- !u!1 &734189913
 GameObject:
   m_ObjectHideFlags: 0
@@ -27361,6 +27401,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tray (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0f5c37c7f5ccd814496d2baf517c413f, type: 3}
+      propertyPath: m_TagString
+      value: Lime
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f5c37c7f5ccd814496d2baf517c413f, type: 3}
 --- !u!4 &1258865851 stripped
@@ -33014,6 +33058,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477051694}
   m_CullTransparentMesh: 1
+--- !u!1 &1479297571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f5c37c7f5ccd814496d2baf517c413f, type: 3}
+  m_PrefabInstance: {fileID: 1258865850}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1479297574
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479297571}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.77872914, y: 0.14683801, z: 1.1557382}
+  m_Center: {x: 0, y: 0.06745204, z: 0}
 --- !u!1001 &1479684143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50733,6 +50795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tray
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0f5c37c7f5ccd814496d2baf517c413f, type: 3}
+      propertyPath: m_TagString
+      value: Orange
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f5c37c7f5ccd814496d2baf517c413f, type: 3}
 --- !u!4 &1984606130 stripped
@@ -55093,6 +55159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da631a8b2938e4d4baf12971021c843d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  glass: {fileID: 0}
   FruitList:
   - {fileID: 1991928592625270415, guid: b1eb35544835ed54bbf8c915ffb6dcba, type: 3}
   - {fileID: 8484328225148924991, guid: 79942d1f4381d494e86acf3ab20c6b49, type: 3}
