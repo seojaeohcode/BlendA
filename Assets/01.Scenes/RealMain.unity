@@ -14746,6 +14746,7 @@ MonoBehaviour:
   raycastDistance: 10
   glass: {fileID: 1897616213}
   bottle: {fileID: 1337380903}
+  drink_ui: {fileID: 0}
 --- !u!1001 &609803437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16078,6 +16079,7 @@ MonoBehaviour:
   raycastDistance: 10
   glass: {fileID: 2339231939312404049}
   bottle: {fileID: 919132149455206796}
+  drink_ui: {fileID: 943848140}
 --- !u!1001 &684177307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22133,6 +22135,7 @@ MonoBehaviour:
   raycastDistance: 10
   glass: {fileID: 1897616213}
   bottle: {fileID: 7817930022510078376}
+  drink_ui: {fileID: 0}
 --- !u!1 &1025270234
 GameObject:
   m_ObjectHideFlags: 0
@@ -30343,6 +30346,7 @@ MonoBehaviour:
   raycastDistance: 10
   glass: {fileID: 1897616213}
   bottle: {fileID: 7433967110478225094}
+  drink_ui: {fileID: 0}
 --- !u!1 &1379630705
 GameObject:
   m_ObjectHideFlags: 0
@@ -46997,6 +47001,7 @@ MonoBehaviour:
   raycastDistance: 10
   glass: {fileID: 1897616213}
   bottle: {fileID: 1337380903}
+  drink_ui: {fileID: 0}
 --- !u!1001 &1851920066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54469,6 +54474,7 @@ MonoBehaviour:
   raycastDistance: 10
   glass: {fileID: 2339231939312404049}
   bottle: {fileID: 7243552230862616175}
+  drink_ui: {fileID: 646435387652707468}
 --- !u!222 &646435387652707467
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -56095,6 +56101,7 @@ MonoBehaviour:
   raycastDistance: 10
   glass: {fileID: 1897616213}
   bottle: {fileID: 6872020359428264985}
+  drink_ui: {fileID: 0}
 --- !u!4 &3684102775194010366
 Transform:
   m_ObjectHideFlags: 0
@@ -56760,6 +56767,7 @@ MonoBehaviour:
   raycastDistance: 10
   glass: {fileID: 2339231939312404049}
   bottle: {fileID: 4920612949876410806}
+  drink_ui: {fileID: 711360999}
 --- !u!1 &5982237829821018805
 GameObject:
   m_ObjectHideFlags: 0

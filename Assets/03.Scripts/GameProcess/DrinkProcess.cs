@@ -191,7 +191,7 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
-
+                glass.GetComponent<Renderer>().material.SetColor("_Colour", »ö±ò);
             }           
             else if (Element.SequenceEqual(Jack) == true)
             {

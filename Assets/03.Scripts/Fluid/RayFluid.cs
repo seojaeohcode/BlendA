@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using TMPro;
 
 public class RayFluid : MonoBehaviour
 {
@@ -11,18 +12,17 @@ public class RayFluid : MonoBehaviour
     public GameObject glass;
     public GameObject bottle;
     Vector3 dir = new Vector3(0, 1, 0);
-    
+    public TextMeshProUGUI drink_ui;
     // Start is called before the first frame update
     void Start()
     {
+        //Debug.Log(a);
         Renderer glassR = glass.GetComponent<Renderer>();
         Renderer glassTR = glass.transform.GetComponent<Renderer>();
         glassR.material.shader = Shader.Find("BitshiftProgrammer/Liquid");
         a = glassTR.material.GetFloat("_FillAmount");
         glassTR.material.SetFloat("_FillAmount", 1.0f);
-        //Debug.Log(a);
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -97,6 +97,9 @@ public class RayFluid : MonoBehaviour
             if (hit.collider.gameObject.CompareTag("glass"))
             {
                 Debug.Log("채워짐");
+                
+                glass.GetComponent<Renderer>().material.SetColor("_Colour", drink_ui.color);
+
                 if (this.gameObject.layer == LayerMask.NameToLayer("Alcohol"))
                 {
                     //자기 자신의 태그나 레이어가 알콜인지 논알콜인지 체크.
