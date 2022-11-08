@@ -113,7 +113,7 @@ public class MoveNpc : MonoBehaviour
             Invoke("setChair", 0.5f);
             QueryIndex = -1;
             out_target.SetActive(false);
-            GameManager.GetComponent<GameManager>().IsMan = !(GameManager.GetComponent<GameManager>().IsMan);
+            GameManager.GetComponent<GameManager>().IsMan = !(GameManager.GetComponent<GameManager>().IsMan);           
         }
     }
 }

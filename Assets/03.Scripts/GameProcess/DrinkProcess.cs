@@ -191,7 +191,7 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
-                glass.GetComponent<Renderer>().material.SetColor("_Colour", »ö±ò);
+                glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f,123f,0f));
             }           
             else if (Element.SequenceEqual(Jack) == true)
             {
@@ -205,7 +205,8 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
-                
+                glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 161f, 91f));
+
             }
             else if (Element.SequenceEqual(Vodka) == true)
             {
@@ -219,6 +220,7 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
+                glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 255f, 255f));
             }
             else if (Element.SequenceEqual(JackJuice) == true)
             {
@@ -232,6 +234,7 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
+                glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 132f, 40f));
             }
             else if (Element.SequenceEqual(JackVodka) == true)
             {
@@ -244,8 +247,10 @@ public class DrinkProcess : MonoBehaviour
                     Element[i] = null;
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
-                glassTR.material.SetFloat("_FillAmount", 1);                
+                glassTR.material.SetFloat("_FillAmount", 1);
+                glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 182f, 126f));
             }
+
             else if (Element.SequenceEqual(OrangeJackJuice) == true)
             {
 
@@ -258,6 +263,7 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
+                glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 132f, 40f));
                 DeleteChilds();
 
 
@@ -274,6 +280,7 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
+                glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 182f, 126f));
                 DeleteChilds();
 
             }
@@ -289,6 +296,7 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
+                glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 161f, 91f));
                 DeleteChilds();
 
             }
@@ -304,6 +312,7 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
+                glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 132f, 40f));
                 DeleteChilds();
 
             }
@@ -319,6 +328,7 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
+                glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 123f, 0f));
                 DeleteChilds();
 
             }
@@ -334,6 +344,7 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
+                glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 161f, 91f));
                 DeleteChilds();
 
             }
@@ -349,6 +360,7 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
+                glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 123f, 0f));
                 DeleteChilds();
 
             }
@@ -362,6 +374,7 @@ public class DrinkProcess : MonoBehaviour
                 }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
+                glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(0f, 0f, 0f));
                 DeleteChilds();
             }
         }
