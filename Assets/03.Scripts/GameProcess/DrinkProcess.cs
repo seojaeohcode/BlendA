@@ -47,7 +47,7 @@ public class DrinkProcess : MonoBehaviour
     }
     void Start()
     {
-        for(int i=0; i<3; i++)
+        for(int i=0; i<4; i++)
         {
             Element[i] = null;
         }
@@ -183,7 +183,7 @@ public class DrinkProcess : MonoBehaviour
                 DrinkType = "OrangeJuice";
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     Element[i] = null;
                 }
@@ -197,7 +197,7 @@ public class DrinkProcess : MonoBehaviour
                 DrinkType = "Jack";
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     Element[i] = null;
                 }
@@ -210,7 +210,7 @@ public class DrinkProcess : MonoBehaviour
                 DrinkType = "Vodka";
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     Element[i] = null;
                 }
@@ -223,7 +223,7 @@ public class DrinkProcess : MonoBehaviour
                 DrinkType = "JackJuice";
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     Element[i] = null;
                 }
@@ -249,7 +249,7 @@ public class DrinkProcess : MonoBehaviour
                 DrinkType = "OrangeJackJuice";
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     Element[i] = null;
                 }
@@ -262,7 +262,7 @@ public class DrinkProcess : MonoBehaviour
                 DrinkType = "OrangeJackVodka";
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     Element[i] = null;
                 }
@@ -275,7 +275,7 @@ public class DrinkProcess : MonoBehaviour
                 DrinkType = "LimeJack";
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     Element[i] = null;
                 }
@@ -288,7 +288,7 @@ public class DrinkProcess : MonoBehaviour
                 DrinkType = "LimeJackJuice";
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     Element[i] = null;
                 }
@@ -301,7 +301,7 @@ public class DrinkProcess : MonoBehaviour
                 DrinkType = "LimeJuice";
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     Element[i] = null;
                 }
@@ -314,7 +314,7 @@ public class DrinkProcess : MonoBehaviour
                 DrinkType = "CherryJack";
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     Element[i] = null;
                 }
@@ -327,7 +327,7 @@ public class DrinkProcess : MonoBehaviour
                 DrinkType = "CherryJuice";
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     Element[i] = null;
                 }
@@ -338,7 +338,7 @@ public class DrinkProcess : MonoBehaviour
             {
                 Debug.Log("½ÇÆÐ");
                 DrinkType = "Fail";
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     Element[i] = null;
                 }
