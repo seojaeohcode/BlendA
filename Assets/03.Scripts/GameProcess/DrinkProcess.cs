@@ -181,197 +181,184 @@ public class DrinkProcess : MonoBehaviour
             */
             if (Element.SequenceEqual(OrangeJuice) == true)
             {
-                
+                Debug.Log("성공");
                 DrinkType = "OrangeJuice";
+                Debug.Log(DrinkType);
+
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
+                /*
                 for (int i = 0; i < 4; i++)
                 {
                     Element[i] = null;
-                }
+                }*/
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f,123f,0f));
+                
             }           
             else if (Element.SequenceEqual(Jack) == true)
             {
-                
+                Debug.Log("성공");
                 DrinkType = "Jack";
+                Debug.Log(DrinkType);
+
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
+                /*
                 for (int i = 0; i < 4; i++)
                 {
                     Element[i] = null;
-                }
+                }*/
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 161f, 91f));
+                
 
             }
             else if (Element.SequenceEqual(Vodka) == true)
             {
-
+                Debug.Log("성공");
                 DrinkType = "Vodka";
+                Debug.Log(DrinkType);
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 4; i++)
-                {
-                    Element[i] = null;
-                }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 255f, 255f));
+                
             }
             else if (Element.SequenceEqual(JackJuice) == true)
             {
-
+                Debug.Log("성공");
                 DrinkType = "JackJuice";
+                Debug.Log(DrinkType);
+
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 4; i++)
-                {
-                    Element[i] = null;
-                }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 132f, 40f));
+                
             }
             else if (Element.SequenceEqual(JackVodka) == true)
             {
-
+                Debug.Log("성공");
                 DrinkType = "JackVodka";
+                Debug.Log(DrinkType);
+
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 3; i++)
-                {
-                    Element[i] = null;
-                }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 182f, 126f));
+                
             }
 
             else if (Element.SequenceEqual(OrangeJackJuice) == true)
             {
-
+                Debug.Log("성공");
                 DrinkType = "OrangeJackJuice";
+                Debug.Log(DrinkType);
+
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 4; i++)
-                {
-                    Element[i] = null;
-                }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 132f, 40f));
                 DeleteChilds();
-
+                
 
             }
             else if (Element.SequenceEqual(OrangeJackVodka) == true)
             {
-
+                Debug.Log("성공");
                 DrinkType = "OrangeJackVodka";
+                Debug.Log(DrinkType);
+
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 4; i++)
-                {
-                    Element[i] = null;
-                }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 182f, 126f));
                 DeleteChilds();
-
+                
             }
             else if (Element.SequenceEqual(LimeJack) == true)
             {
-
+                Debug.Log("성공");
                 DrinkType = "LimeJack";
+                Debug.Log(DrinkType);
+
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 4; i++)
-                {
-                    Element[i] = null;
-                }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 161f, 91f));
                 DeleteChilds();
-
+                
             }
             else if (Element.SequenceEqual(LimeJackJuice) == true)
             {
-
+                Debug.Log("성공");
                 DrinkType = "LimeJackJuice";
+                Debug.Log(DrinkType);
+
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 4; i++)
-                {
-                    Element[i] = null;
-                }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 132f, 40f));
                 DeleteChilds();
-
+                
             }
             else if (Element.SequenceEqual(LimeJuice) == true)
             {
-
+                Debug.Log("성공");
                 DrinkType = "LimeJuice";
+                Debug.Log(DrinkType);
+
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 4; i++)
-                {
-                    Element[i] = null;
-                }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 123f, 0f));
                 DeleteChilds();
-
+                
             }
             else if (Element.SequenceEqual(CherryJack) == true)
             {
-
+                Debug.Log("성공");
                 DrinkType = "CherryJack";
+                Debug.Log(DrinkType);
+
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 4; i++)
-                {
-                    Element[i] = null;
-                }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 161f, 91f));
                 DeleteChilds();
-
+                
             }
             else if (Element.SequenceEqual(CherryJuice) == true)
             {
-
+                Debug.Log("성공");
                 DrinkType = "CherryJuice";
+                Debug.Log(DrinkType);
+
                 this.transform.position = nowPosition;
                 //Element = new GameObject[3];
-                for (int i = 0; i < 4; i++)
-                {
-                    Element[i] = null;
-                }
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 123f, 0f));
                 DeleteChilds();
-
+                
             }
             else
             {
                 Debug.Log("실패");
                 DrinkType = "Fail";
-                for (int i = 0; i < 4; i++)
-                {
-                    Element[i] = null;
-                }
+                Debug.Log(DrinkType);
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(0f, 0f, 0f));

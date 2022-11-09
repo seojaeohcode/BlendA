@@ -18,7 +18,7 @@ public class MoveNpc : MonoBehaviour
     "저는 술을 안좋아하고 새콤달콤한 과일이 좋아요","그 술은 아주 쓴데도 좋더라구요!!","아마... 체리가 있던 부드러운 양주일거에요!",
     };
     
-    string[] CorrectList = new string[] { "OrangJuice", "Jack","JackJuice"
+    string[] CorrectList = new string[] { "OrangeJuice", "Jack","JackJuice"
     ,"JackJuice","OrangeJackJuice","LimeJackJuice",
     "LimeJuice","JackVodka","OrangeJackVodka",
     "Vodka","CherryJack","LimeJack",
@@ -28,6 +28,7 @@ public class MoveNpc : MonoBehaviour
     public string collect = "";
     public GameObject glass;
     public bool Go_Out = true;
+    public bool isCheck = true;
 
     void Start()
     {
@@ -50,25 +51,31 @@ public class MoveNpc : MonoBehaviour
 
         if (IsSit && (QueryIndex==-1))
         {
+            
             QueryIndex = ((int)Random.Range(0f, 12f));
             npc_ui.text = QueryList[QueryIndex];
             collect = CorrectList[QueryIndex];
+            Debug.Log(collect);
         }
 
-        if(glass.GetComponent<DrinkProcess>().DrinkType != "None")
+        if(glass.GetComponent<DrinkProcess>().DrinkType != "None" && isCheck==false)
         {
             string submit = glass.GetComponent<DrinkProcess>().DrinkType;
+            Debug.Log(submit);
             if (submit == collect)
             {
+                Debug.Log("정답컴인");
                 npc_ui.text = "정답입니다!";
-                glass.GetComponent<DrinkProcess>().DrinkType = "None";
+                //glass.GetComponent<DrinkProcess>().DrinkType = "None";
                 Go_Out = true;
+                isCheck = true;
             }
             else
             {
                 npc_ui.text = "실패...";
-                glass.GetComponent<DrinkProcess>().DrinkType = "None";
+                //glass.GetComponent<DrinkProcess>().DrinkType = "None";
                 Go_Out = true;
+                isCheck = true;
             }
         }
     }
@@ -83,6 +90,11 @@ public class MoveNpc : MonoBehaviour
     }
     void MoveToOut()
     {
+        glass.GetComponent<DrinkProcess>().DrinkType = "None";
+        for (int i = 0; i < 4; i++)
+        {
+            glass.GetComponent<DrinkProcess>().Element[i] = null;
+        }
         animator.SetBool("sitting", false);
         gameObject.transform.rotation = Quaternion.Euler(0, 90, 0);
         if (out_target.transform.position != Vector3.MoveTowards(transform.position, out_target.transform.position, 1f))
@@ -106,6 +118,7 @@ public class MoveNpc : MonoBehaviour
             target.SetActive(false);
             IsSit = true;
             out_target.SetActive(true);
+            isCheck = false;
         }
         else if (other.gameObject.CompareTag("OutPos"))
         {
@@ -113,7 +126,8 @@ public class MoveNpc : MonoBehaviour
             Invoke("setChair", 0.5f);
             QueryIndex = -1;
             out_target.SetActive(false);
-            GameManager.GetComponent<GameManager>().IsMan = !(GameManager.GetComponent<GameManager>().IsMan);           
+            GameManager.GetComponent<GameManager>().IsMan = !(GameManager.GetComponent<GameManager>().IsMan);
+            isCheck = false;
         }
     }
 }

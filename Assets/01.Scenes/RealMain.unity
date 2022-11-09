@@ -7995,7 +7995,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4654219824a2e554c853ccc294bef02b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -22211,6 +22211,7 @@ MonoBehaviour:
   collect: 
   glass: {fileID: 2339231939312404049}
   Go_Out: 1
+  isCheck: 1
 --- !u!54 &1020652563
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -32934,6 +32935,7 @@ MonoBehaviour:
   collect: 
   glass: {fileID: 2339231939312404049}
   Go_Out: 1
+  isCheck: 1
 --- !u!95 &1467810031 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6413142101946642464, guid: b44fb89452f013a4882be37a7830530b, type: 3}
@@ -55420,7 +55422,7 @@ MonoBehaviour:
   - {fileID: 919132149455206796}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 919132149455206796}
+  - {fileID: 0}
   JackJuice:
   - {fileID: 7243552230862616175}
   - {fileID: 4920612949876410806}
@@ -55460,7 +55462,7 @@ MonoBehaviour:
   - {fileID: 7243552230862616175}
   - {fileID: 0}
   - {fileID: 5306132383291701502, guid: aef9e00b7d00fb84ab863b44d98cbf99, type: 3}
-  - {fileID: 7243552230862616175}
+  - {fileID: 0}
   CherryJuice:
   - {fileID: 0}
   - {fileID: 4920612949876410806}
@@ -55667,7 +55669,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2339231939312404049}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.677, y: -0.09500027, z: -5.829998}
+  m_LocalPosition: {x: -0.319, y: -0.09500027, z: -5.966}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 882683083}
@@ -56574,6 +56576,14 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 2100000, guid: 891448524926b3a44895e68c65248d9f, type: 2}
+  - {fileID: 2100000, guid: 891448524926b3a44895e68c65248d9f, type: 2}
+  - {fileID: 2100000, guid: 891448524926b3a44895e68c65248d9f, type: 2}
+  - {fileID: 2100000, guid: 891448524926b3a44895e68c65248d9f, type: 2}
+  - {fileID: 2100000, guid: 891448524926b3a44895e68c65248d9f, type: 2}
+  - {fileID: 2100000, guid: 891448524926b3a44895e68c65248d9f, type: 2}
+  - {fileID: 2100000, guid: 891448524926b3a44895e68c65248d9f, type: 2}
+  - {fileID: 2100000, guid: 891448524926b3a44895e68c65248d9f, type: 2}
   - {fileID: 2100000, guid: 891448524926b3a44895e68c65248d9f, type: 2}
   - {fileID: 2100000, guid: 891448524926b3a44895e68c65248d9f, type: 2}
   m_StaticBatchInfo:
