@@ -55622,6 +55622,7 @@ GameObject:
   - component: {fileID: 919132149455206798}
   - component: {fileID: 919132149455206797}
   - component: {fileID: 919132149455206801}
+  - component: {fileID: 919132149455206802}
   m_Layer: 8
   m_Name: Vodka
   m_TagString: Object
@@ -55707,6 +55708,20 @@ MonoBehaviour:
   useOutline: 1
   playOnAwake: 0
   positiveColor: {r: 0, g: 1, b: 1, a: 1}
+--- !u!114 &919132149455206802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149455206796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35038e6ad34325143acadf60b963632d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nowPosition: {x: 0, y: 0, z: 0}
+  nowPosition2: {x: 0, y: 0, z: 0}
 --- !u!23 &1711813855210372374
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -55912,6 +55927,7 @@ GameObject:
   - component: {fileID: 2339231939312404051}
   - component: {fileID: 2339231939312404050}
   - component: {fileID: 2339231939312404054}
+  - component: {fileID: 2339231939312404055}
   m_Layer: 0
   m_Name: Glass
   m_TagString: glass
@@ -56065,6 +56081,20 @@ MonoBehaviour:
   useOutline: 1
   playOnAwake: 1
   positiveColor: {r: 0.39101997, g: 0.9528302, b: 0.83859116, a: 1}
+--- !u!114 &2339231939312404055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2339231939312404049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35038e6ad34325143acadf60b963632d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nowPosition: {x: 0, y: 0, z: 0}
+  nowPosition2: {x: 0, y: 0, z: 0}
 --- !u!23 &2736681518331817023
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -57210,6 +57240,7 @@ GameObject:
   - component: {fileID: 4920612949876410811}
   - component: {fileID: 4920612949876410810}
   - component: {fileID: 4920612949876410812}
+  - component: {fileID: 4920612949876410813}
   m_Layer: 7
   m_Name: Orange_Juice
   m_TagString: Object
@@ -57309,6 +57340,20 @@ MonoBehaviour:
   useOutline: 1
   playOnAwake: 0
   positiveColor: {r: 0, g: 1, b: 1, a: 1}
+--- !u!114 &4920612949876410813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4920612949876410806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35038e6ad34325143acadf60b963632d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nowPosition: {x: 0, y: 0, z: 0}
+  nowPosition2: {x: 0, y: 0, z: 0}
 --- !u!23 &4926566818221848012
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -57756,6 +57801,7 @@ GameObject:
   - component: {fileID: 646435387800212742}
   - component: {fileID: 646435387800212738}
   - component: {fileID: 646435387800212739}
+  - component: {fileID: 7243552230862616176}
   m_Layer: 8
   m_Name: JackDaniel
   m_TagString: Object
@@ -57763,6 +57809,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7243552230862616176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7243552230862616175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35038e6ad34325143acadf60b963632d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nowPosition: {x: 0, y: 0, z: 0}
+  nowPosition2: {x: 0, y: 0, z: 0}
 --- !u!1 &7433967110478225094
 GameObject:
   m_ObjectHideFlags: 0
