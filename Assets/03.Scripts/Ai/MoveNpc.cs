@@ -10,6 +10,7 @@ public class MoveNpc : MonoBehaviour
     public GameObject out_target;
     public Animator animator;
     public TextMeshProUGUI npc_ui;
+    public TextMeshProUGUI order_ui;
     public bool IsSit = false;
     string[] QueryList = new string[] { "음...달콤한게 좋겠어요!", "부드럽고 과일향이 나는 양주가 좋겠네요!","부드러운 양주에 달콤한것을 섞어주세요!",
         "양주인데... 주스 맛도 났던거같아요!","오렌지가 올라갔고 부드러운 양주와 주스맛이 났던거같아요!","부드러운 양주에 달콤한것을 섞고 라임을 올려주세요!",
@@ -35,6 +36,7 @@ public class MoveNpc : MonoBehaviour
         
         glass.GetComponent<DrinkProcess>().DrinkType = "None"; 
         npc_ui.text = "기다리세요..";
+        order_ui.text = npc_ui.text;
         out_target.SetActive(false);
     }
 
@@ -54,6 +56,7 @@ public class MoveNpc : MonoBehaviour
             
             QueryIndex = ((int)Random.Range(0f, 12f));
             npc_ui.text = QueryList[QueryIndex];
+            order_ui.text = npc_ui.text;
             collect = CorrectList[QueryIndex];
             Debug.Log(collect);
         }
@@ -66,6 +69,7 @@ public class MoveNpc : MonoBehaviour
             {
                 Debug.Log("정답컴인");
                 npc_ui.text = "정답입니다!";
+                order_ui.text = npc_ui.text;
                 //glass.GetComponent<DrinkProcess>().DrinkType = "None";
                 Go_Out = true;
                 isCheck = true;
@@ -73,6 +77,7 @@ public class MoveNpc : MonoBehaviour
             else
             {
                 npc_ui.text = "실패...";
+                order_ui.text = npc_ui.text;
                 //glass.GetComponent<DrinkProcess>().DrinkType = "None";
                 Go_Out = true;
                 isCheck = true;
@@ -103,6 +108,7 @@ public class MoveNpc : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, out_target.transform.position, 6f * Time.deltaTime); // 현위치, 도착점, 속도
         }
         npc_ui.text = "다음차례...";
+        order_ui.text = npc_ui.text;
     }
     void setChair()
     {

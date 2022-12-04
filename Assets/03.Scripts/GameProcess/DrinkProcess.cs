@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using TMPro;
 
 public class DrinkProcess : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class DrinkProcess : MonoBehaviour
 
     public GameObject FruitPoint;
     public string DrinkType = "None";
+
+    //점수 UI 변수
+    public int Score = 0;
+    public TextMeshProUGUI ScoreBoard;
 
     //public string DrinkType = "None";
     
@@ -59,6 +64,8 @@ public class DrinkProcess : MonoBehaviour
         Renderer glassTR = glass.transform.GetComponent<Renderer>();
         glassR.material.shader = Shader.Find("BitshiftProgrammer/Liquid");
         a = glassTR.material.GetFloat("_FillAmount");
+        //점수 UI
+        ScoreBoard.text = Score.ToString() + " 원";
     }
 
     // Update is called once per frame
@@ -195,7 +202,8 @@ public class DrinkProcess : MonoBehaviour
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f,123f,0f));
-                
+                Score = Score + 500;
+                ScoreBoard.text = Score.ToString() + " 원";
             }           
             else if (Element.SequenceEqual(Jack) == true)
             {
@@ -213,7 +221,8 @@ public class DrinkProcess : MonoBehaviour
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 161f, 91f));
-                
+                Score = Score + 500;
+                ScoreBoard.text = Score.ToString() + " 원";
 
             }
             else if (Element.SequenceEqual(Vodka) == true)
@@ -226,7 +235,8 @@ public class DrinkProcess : MonoBehaviour
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 255f, 255f));
-                
+                Score = Score + 500;
+                ScoreBoard.text = Score.ToString() + " 원";
             }
             else if (Element.SequenceEqual(JackJuice) == true)
             {
@@ -239,7 +249,8 @@ public class DrinkProcess : MonoBehaviour
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 132f, 40f));
-                
+                Score = Score + 500;
+                ScoreBoard.text = Score.ToString() + " 원";
             }
             else if (Element.SequenceEqual(JackVodka) == true)
             {
@@ -252,7 +263,8 @@ public class DrinkProcess : MonoBehaviour
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 182f, 126f));
-                
+                Score = Score + 500;
+                ScoreBoard.text = Score.ToString() + " 원";
             }
 
             else if (Element.SequenceEqual(OrangeJackJuice) == true)
@@ -267,7 +279,8 @@ public class DrinkProcess : MonoBehaviour
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 132f, 40f));
                 DeleteChilds();
-                
+                Score = Score + 500;
+                ScoreBoard.text = Score.ToString() + " 원";
 
             }
             else if (Element.SequenceEqual(OrangeJackVodka) == true)
@@ -282,7 +295,8 @@ public class DrinkProcess : MonoBehaviour
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 182f, 126f));
                 DeleteChilds();
-                
+                Score = Score + 500;
+                ScoreBoard.text = Score.ToString() + " 원";
             }
             else if (Element.SequenceEqual(LimeJack) == true)
             {
@@ -296,7 +310,8 @@ public class DrinkProcess : MonoBehaviour
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 161f, 91f));
                 DeleteChilds();
-                
+                Score = Score + 500;
+                ScoreBoard.text = Score.ToString() + " 원";
             }
             else if (Element.SequenceEqual(LimeJackJuice) == true)
             {
@@ -310,7 +325,8 @@ public class DrinkProcess : MonoBehaviour
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 132f, 40f));
                 DeleteChilds();
-                
+                Score = Score + 500;
+                ScoreBoard.text = Score.ToString() + " 원";
             }
             else if (Element.SequenceEqual(LimeJuice) == true)
             {
@@ -324,7 +340,8 @@ public class DrinkProcess : MonoBehaviour
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 123f, 0f));
                 DeleteChilds();
-                
+                Score = Score + 500;
+                ScoreBoard.text = Score.ToString() + " 원";
             }
             else if (Element.SequenceEqual(CherryJack) == true)
             {
@@ -338,7 +355,8 @@ public class DrinkProcess : MonoBehaviour
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 161f, 91f));
                 DeleteChilds();
-                
+                Score = Score + 500;
+                ScoreBoard.text = Score.ToString() + " 원";
             }
             else if (Element.SequenceEqual(CherryJuice) == true)
             {
@@ -352,7 +370,8 @@ public class DrinkProcess : MonoBehaviour
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(255f, 123f, 0f));
                 DeleteChilds();
-                
+                Score = Score + 500;
+                ScoreBoard.text = Score.ToString() + " 원";
             }
             else
             {
@@ -363,6 +382,8 @@ public class DrinkProcess : MonoBehaviour
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(0f, 0f, 0f));
                 DeleteChilds();
+                Score = Score - 500;
+                ScoreBoard.text = Score.ToString() + " 원";
             }
         }
         //----------------------------------------------------------------

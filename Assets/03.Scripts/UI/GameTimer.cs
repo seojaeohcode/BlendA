@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameTimer : MonoBehaviour
 {
     float Sec;
     int Min;
-    public Text timeText;    
+    public TextMeshProUGUI timeText;    
     
     private void Start()
     {
