@@ -11,7 +11,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: 95186851ace7d6f4cad53efd831fe73b, type: 3}
   m_ShaderKeywords: _FALLOFFOPACITY_ON _FRESNELONOFF_ON _USECUBEMAP_OFF
   m_LightmapFlags: 2
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -46,7 +46,7 @@ Material:
     - _Brightness: 1
     - _BumpScale: 0.1
     - _ChromaticAberration: 0.1
-    - _Fade: 0
+    - _Fade: 0.7
     - _FalloffFade: 0
     - _FalloffOpacity: 1
     - _FalloffOpacityIntensity: 0
@@ -88,3 +88,4 @@ Material:
     - _ColorFresnel: {r: 0, g: 0, b: 0, a: 0}
     - _ColorFresnel1: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
