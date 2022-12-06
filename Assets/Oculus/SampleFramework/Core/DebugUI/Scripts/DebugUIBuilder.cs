@@ -90,7 +90,7 @@ public class DebugUIBuilder : MonoBehaviour
   LaserPointer lp;
   LineRenderer lr;
 
-  public LaserPointer.LaserBeamBehavior laserBeamBehavior;
+  //public LaserPointer.LaserBeamBehavior laserBeamBehavior;
   public bool isHorizontal = false;
   public bool usePanelCentricRelayout = false;
 
@@ -129,7 +129,7 @@ public class DebugUIBuilder : MonoBehaviour
       Debug.LogError("Debug UI requires use of a LaserPointer and will not function without it. Add one to your scene, or assign the UIHelpers prefab to the DebugUIBuilder in the inspector.");
       return;
     }
-    lp.laserBeamBehavior = laserBeamBehavior;
+    // lp.laserBeamBehavior = laserBeamBehavior;
 
     if (!toEnable.Contains(lp.gameObject))
     {
