@@ -128,7 +128,7 @@ public class DrinkProcess : MonoBehaviour
         Quaternion cur = this.transform.rotation;
         float changeRot = 0;
 
-        Debug.Log("Z변경");
+        //Debug.Log("Z변경");
         if (cur.eulerAngles.z < 0)
         {
             changeRot = 100.0f;

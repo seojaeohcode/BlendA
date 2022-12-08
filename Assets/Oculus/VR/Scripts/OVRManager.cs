@@ -2348,7 +2348,7 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
 		}
 		else
 		{
-			Debug.Log("[OVRManager] OnApplicationPause(false)");
+			//Debug.Log("[OVRManager] OnApplicationPause(false)");
 		}
 	}
 

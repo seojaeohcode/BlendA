@@ -21,7 +21,7 @@ public class OVRLocomotion : MonoBehaviour
 
     void Update()
     {
-        //PlayerMove();
+        PlayerMove();
 
         if (!turnRotate)
         {

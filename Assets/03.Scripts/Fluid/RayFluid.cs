@@ -96,7 +96,7 @@ public class RayFluid : MonoBehaviour
         {
             if (hit.collider.gameObject.CompareTag("glass"))
             {
-                Debug.Log("Ã¤¿öÁü");
+                //Debug.Log("Ã¤¿öÁü");
                 
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", drink_ui.color);
 
