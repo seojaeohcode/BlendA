@@ -21,15 +21,15 @@ public class OVRLocomotion : MonoBehaviour
 
     void Update()
     {
-        PlayerMove();
+        //PlayerMove();
 
         if (!turnRotate)
         {
-            PlayerRotate();
+            //PlayerRotate();
         }
         else
         {
-            PlayerTurn();
+            //PlayerTurn();
         }
     }
 
