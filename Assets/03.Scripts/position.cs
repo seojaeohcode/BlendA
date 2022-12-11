@@ -6,10 +6,13 @@ public class position : MonoBehaviour
 {
     public Vector3 nowPosition;
     public Vector3 nowPosition2;
+    public Vector3 nowRoation;
+    
     // Start is called before the first frame update
     private void Awake()
     {
         nowPosition = this.transform.position;
+        nowRoation = this.transform.eulerAngles;
     }
 
     void Start()
@@ -29,6 +32,7 @@ public class position : MonoBehaviour
         {
             
             this.transform.position = nowPosition;
+            this.transform.eulerAngles = nowRoation;
             this.gameObject.GetComponent<Rigidbody>().isKinematic = true;
         }
     }
