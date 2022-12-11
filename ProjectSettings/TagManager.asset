@@ -27,6 +27,7 @@ TagManager:
   - OutPos
   - Lemon
   - NPC
+  - Reset
   layers:
   - Default
   - TransparentFX

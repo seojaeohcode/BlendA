@@ -385,6 +385,20 @@ public class DrinkProcess : MonoBehaviour
                 Score = Score - 500;
                 ScoreBoard.text = Score.ToString() + " ¿ø";
             }
+
+            
+
+        }
+
+        if (other.gameObject.CompareTag("Reset"))
+        {
+            Debug.Log("¸®¼Â");
+            DrinkType = "None";
+            Debug.Log(DrinkType);
+            Renderer glassTR = glass.transform.GetComponent<Renderer>();
+            glassTR.material.SetFloat("_FillAmount", 1);
+            glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(0f, 0f, 0f));
+            DeleteChilds();
         }
         //----------------------------------------------------------------
 
