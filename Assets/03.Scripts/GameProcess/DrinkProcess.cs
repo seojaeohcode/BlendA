@@ -378,6 +378,8 @@ public class DrinkProcess : MonoBehaviour
                 Debug.Log("실패");
                 DrinkType = "Fail";
                 Debug.Log(DrinkType);
+
+                this.transform.position = nowPosition;
                 Renderer glassTR = glass.transform.GetComponent<Renderer>();
                 glassTR.material.SetFloat("_FillAmount", 1);
                 glass.GetComponent<Renderer>().material.SetColor("_Colour", new Color(0f, 0f, 0f));
@@ -392,7 +394,7 @@ public class DrinkProcess : MonoBehaviour
 
         if (other.gameObject.CompareTag("Reset"))
         {
-            Debug.Log("리셋");
+            //Debug.Log("리셋");
             DrinkType = "None";
             Debug.Log(DrinkType);
             Renderer glassTR = glass.transform.GetComponent<Renderer>();

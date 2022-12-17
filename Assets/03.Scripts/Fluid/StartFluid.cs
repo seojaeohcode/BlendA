@@ -26,7 +26,7 @@ public class StartFluid : MonoBehaviour
             //咀眉 积己
             if (isFluid == false)
             {
-                Debug.Log("澜丰积己");
+                //Debug.Log("澜丰积己");
                 isFluid = true;
                 GameObject temp = Instantiate(Obi, FluidPoint.position, Quaternion.Euler(0, 0, 0));
                 temp.transform.SetParent(FluidPoint.transform);
