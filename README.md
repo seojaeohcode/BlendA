@@ -1,6 +1,6 @@
 # 2022 창의적종합설계 경진대회
-# Skin Image Diagnosis
-> **Team NOTT** <br/> **특이사항: Oculus 사용**
+# 바텐더 직업체험 VR 게임
+> **Team BlendA** <br/> **특이사항: Oculus 사용**
 # Demonstrate
 https://github.com/user-attachments/assets/56d6b318-fe68-497f-bcca-2af75c8998c3
 
