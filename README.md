@@ -1,4 +1,7 @@
-# 2022 창의적종합설계 경진대회
+# 2022 창의적종합설계 경진대회 입상
+
+<img width="1099" height="1538" alt="BlendA_상장" src="https://github.com/user-attachments/assets/3deceb47-0220-4b0d-b18a-464e1653dd69" />
+
 # 바텐더 직업체험 VR 게임
 > **Team BlendA** <br/> **특이사항: Oculus 사용**
 # Demonstrate
